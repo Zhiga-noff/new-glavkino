@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'SFProDisplayBold';
+    src: url('fonts/SFProDisplayBold.eot');
+    src: url('fonts/SFProDisplayBold.eot') format('embedded-opentype'),
+         url('fonts/SFProDisplayBold.woff2') format('woff2'),
+         url('fonts/SFProDisplayBold.woff') format('woff'),
+         url('fonts/SFProDisplayBold.ttf') format('truetype'),
+         url('fonts/SFProDisplayBold.svg#SFProDisplayBold') format('svg');
+}
