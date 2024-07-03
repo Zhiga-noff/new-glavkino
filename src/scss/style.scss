@@ -1,11 +1,12 @@
 // Добавляем обнуляющий стиль
-@import "nullstyle.scss";
+@import 'nullstyle.scss';
 
 // Добавляем шаблоны цветов
-@import "colors.scss";
+@import 'colors.scss';
 
-@import "fonts.scss";
+@import 'fonts.scss';
+
+@import 'index.scss';
 
 body {
-
 }

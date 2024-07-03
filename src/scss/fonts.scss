@@ -1,49 +1,69 @@
 @font-face {
-	font-family: 'SFProDisplay';
-	src: url('../fonts/SFProDisplayRegular.eot');
-	src: url('../fonts/SFProDisplayRegular.eot') format('embedded-opentype'),
-	url('../fonts/SFProDisplayRegular.woff2') format('woff2'),
-	url('../fonts/SFProDisplayRegular.woff') format('woff'),
-	url('../fonts/SFProDisplayRegular.ttf') format('truetype'),
-	url('../fonts/SFProDisplayRegular.svg#SFProDisplayRegular') format('svg');
-	font-weight: 400;
-	font-style: normal;
+    font-family: 'SFProDisplay';
+    src: url('../fonts/SFProDisplayRegular.eot');
+    src:
+        url('../fonts/SFProDisplayRegular.eot') format('embedded-opentype'),
+        url('../fonts/SFProDisplayRegular.woff2') format('woff2'),
+        url('../fonts/SFProDisplayRegular.woff') format('woff'),
+        url('../fonts/SFProDisplayRegular.ttf') format('truetype'),
+        url('../fonts/SFProDisplayRegular.svg#SFProDisplayRegular')
+            format('svg');
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-	font-family: 'SFProDisplay';
-	src: url('../fonts/SFProDisplaySemibold.eot');
-	src: url('../fonts/SFProDisplaySemibold.eot') format('embedded-opentype'),
-	url('../fonts/SFProDisplaySemibold.woff2') format('woff2'),
-	url('../fonts/SFProDisplaySemibold.woff') format('woff'),
-	url('../fonts/SFProDisplaySemibold.ttf') format('truetype'),
-	url('../fonts/SFProDisplaySemibold.svg#SFProDisplaySemibold') format('svg');
-	font-weight: 600;
-	font-style: normal;
+    font-family: 'SFProDisplay';
+    src: url('../fonts/SFProDisplaySemibold.eot');
+    src:
+        url('../fonts/SFProDisplaySemibold.eot') format('embedded-opentype'),
+        url('../fonts/SFProDisplaySemibold.woff2') format('woff2'),
+        url('../fonts/SFProDisplaySemibold.woff') format('woff'),
+        url('../fonts/SFProDisplaySemibold.ttf') format('truetype'),
+        url('../fonts/SFProDisplaySemibold.svg#SFProDisplaySemibold')
+            format('svg');
+    font-weight: 600;
+    font-style: normal;
 }
 
 @font-face {
-	font-family: 'SFProDisplay';
-	src: url('../fonts/SFProDisplayBold.eot');
-	src: url('../fonts/SFProDisplayBold.eot') format('embedded-opentype'),
-	url('../fonts/SFProDisplayBold.woff2') format('woff2'),
-	url('../fonts/SFProDisplayBold.woff') format('woff'),
-	url('../fonts/SFProDisplayBold.ttf') format('truetype'),
-	url('../fonts/SFProDisplayBold.svg#SFProDisplayBold') format('svg');
-	font-weight: 700;
-	font-style: normal;
+    font-family: 'SFProDisplay';
+    src: url('../fonts/SFProDisplayBold.eot');
+    src:
+        url('../fonts/SFProDisplayBold.eot') format('embedded-opentype'),
+        url('../fonts/SFProDisplayBold.woff2') format('woff2'),
+        url('../fonts/SFProDisplayBold.woff') format('woff'),
+        url('../fonts/SFProDisplayBold.ttf') format('truetype'),
+        url('../fonts/SFProDisplayBold.svg#SFProDisplayBold') format('svg');
+    font-weight: 700;
+    font-style: normal;
 }
 
 @font-face {
-	font-family: 'SFProDisplay';
-	src: url('../fonts/SFProDisplayBlack.eot');
-	src: url('../fonts/SFProDisplayBlack.eot') format('embedded-opentype'),
-	url('../fonts/SFProDisplayBlack.woff2') format('woff2'),
-	url('../fonts/SFProDisplayBlack.woff') format('woff'),
-	url('../fonts/SFProDisplayBlack.ttf') format('truetype'),
-	url('../fonts/SFProDisplayBlack.svg#SFProDisplayBlack') format('svg');
-	font-weight: 900;
-	font-style: normal;
+    font-family: 'SFProDisplay';
+    src: url('../fonts/SFProDisplayBlack.eot');
+    src:
+        url('../fonts/SFProDisplayBlack.eot') format('embedded-opentype'),
+        url('../fonts/SFProDisplayBlack.woff2') format('woff2'),
+        url('../fonts/SFProDisplayBlack.woff') format('woff'),
+        url('../fonts/SFProDisplayBlack.ttf') format('truetype'),
+        url('../fonts/SFProDisplayBlack.svg#SFProDisplayBlack') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RFDewiExtended';
+    src: url('../fonts/RFDewiExtended-Semibold.eot');
+    src:
+        url('../fonts/RFDewiExtended-Semibold.eot') format('embedded-opentype'),
+        url('../fonts/RFDewiExtended-Semibold.woff2') format('woff2'),
+        url('../fonts/RFDewiExtended-Semibold.woff') format('woff'),
+        url('../fonts/RFDewiExtended-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
 }
 
 
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
