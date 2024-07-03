@@ -24,6 +24,13 @@
 		color: white;
 		gap: 150px;
 	}
+	&__fourth {
+		@extend %block;
+		display: flex;
+		flex-direction: column;
+		color: white;
+		gap: 80px;
+	}
 }
 
 .info {
@@ -132,5 +139,21 @@
 			scale: 1.1;
 			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 		}
+	}
+}
+
+.numbered-item {
+	display: flex;
+	gap: 50px;
+	&__number {
+		@extend %title;
+		font-size: 60px;
+	}
+	&__text {
+		@extend %description;
+		font-size: 18px;
+		color: #bbbbbb;
+		max-width: 750px;
+		line-height: 30px;
 	}
 }

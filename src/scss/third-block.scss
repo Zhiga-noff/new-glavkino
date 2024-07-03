@@ -76,19 +76,4 @@
 	display: flex;
 	flex-direction: column;
 	gap: 50px;
-	&__item {
-		display: flex;
-		gap: 50px;
-	}
-	&__number {
-		@extend %title;
-		font-size: 60px;
-	}
-	&__text {
-		@extend %description;
-		font-size: 18px;
-		color: #bbbbbb;
-		max-width: 750px;
-		line-height: 30px;
-	}
 }

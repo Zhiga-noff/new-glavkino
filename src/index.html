@@ -2,45 +2,43 @@
 <!doctype html>
 <!-- Оболочка документа, указываем язык содержимого -->
 <html lang="ru">
-    <!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+	<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
 
-    <head>
-        <!-- Заголовок страницы в браузере -->
-        <title>ГЛАВКИНО</title>
-        <!-- Подключаем CSS -->
-        <link rel="stylesheet" href="css/style.min.css" />
-        <!-- Добавляем иконку к сайту -->
-        <link rel="shortcut icon" href="img/favicon.ico" />
-        <!-- Кодировка страницы -->
-        <meta charset="UTF-8" />
-        <!-- Адаптивный метатег -->
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-        />
-    </head>
-    <!-- Отображаемое тело страницы -->
+	<head>
+		<!-- Заголовок страницы в браузере -->
+		<title>ГЛАВКИНО</title>
+		<!-- Подключаем CSS -->
+		<link rel="stylesheet" href="css/style.min.css" />
+		<!-- Добавляем иконку к сайту -->
+		<link rel="shortcut icon" href="img/favicon.ico" />
+		<!-- Кодировка страницы -->
+		<meta charset="UTF-8" />
+		<!-- Адаптивный метатег -->
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+		/>
+	</head>
+	<!-- Отображаемое тело страницы -->
 
-    <body>
-        <div class="block">
-            <div class="block__first">
-                <img
-                    class="block__main-logo"
-                    src="/img/logo-white.svg"
-                    alt="логотип киностудии"
-                />
-            </div>
-            <div class="block__second">
-                @@include('html/second-block.html',{})
-            </div>
-            <div class="block__third" id="paviloni">
-                @@include('html/third-block.html',{})
-            </div>
-            <div class="block__fourth" id="ploshadki"></div>
-            <div class="block__fifth" id="uslugi"></div>
-            <div class="block__sixth" id="contacts"></div>
-        </div>
-        <!-- Подключаем JS главный -->
-        <script src="js/script.js"></script>
-    </body>
+	<body>
+		<div class="block">
+			<div class="block__first">
+				<img
+					class="block__main-logo"
+					src="/img/logo-white.svg"
+					alt="логотип киностудии"
+				/>
+			</div>
+			<div class="block__second">@@include('html/second-block.html',{})</div>
+			<div class="block__third" id="paviloni">@@include('html/third-block.html',{})</div>
+			<div class="block__fourth" id="ploshadki">
+				@@include('html/fourth-block.html',{})
+			</div>
+			<div class="block__fifth" id="uslugi"></div>
+			<div class="block__sixth" id="contacts"></div>
+		</div>
+		<!-- Подключаем JS главный -->
+		<script src="js/script.js"></script>
+	</body>
 </html>
