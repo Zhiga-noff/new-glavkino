@@ -1,25 +1,38 @@
 %block {
-    height: 100vh;
-    width: 100vw;
-    scroll-snap-align: start;
-    background-color: #1c1c1c;
+	height: 100vh;
+	width: 100vw;
+	scroll-snap-align: start;
+	background-color: #1c1c1c;
 }
-%title{
-    font-family: 'RFDewiExtended';
+%title {
+	font-family: 'RFDewiExtended';
 }
-%description{
-    font-family: 'Nunito Sans';
-    font-optical-sizing: auto;
-    font-size: 16px;
-    font-weight: 500;
+%description {
+	font-family: 'Nunito Sans';
+	font-optical-sizing: auto;
+	font-size: 16px;
+	font-weight: 500;
 }
-%overlay{
-    padding-top: 75px;
-    padding-left: 40px;
-    padding-bottom: 50px;
-    width: 100%;
-    height: 100%;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
+%overlay {
+	padding-top: 75px;
+	padding-left: 40px;
+	padding-bottom: 50px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+%button {
+	color: white;
+	font-family: 'RFDewiExtended';
+	font-size: 20px;
+	background-color: #e2241d;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	width: min-content;
+	gap: 70px;
+	align-items: center;
+	text-wrap: nowrap;
 }
