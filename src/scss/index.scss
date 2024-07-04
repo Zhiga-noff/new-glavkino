@@ -16,6 +16,7 @@
 		flex-direction: row;
 		color: white;
 		gap: 230px;
+		padding: 0;
 	}
 	&__third {
 		@extend %block;
@@ -30,6 +31,14 @@
 		flex-direction: column;
 		color: white;
 		gap: 80px;
+		padding-left: 0;
+	}
+	&__fifth {
+		@extend %block;
+		display: flex;
+		flex-direction: column;
+		color: white;
+		gap: 268px;
 	}
 }
 

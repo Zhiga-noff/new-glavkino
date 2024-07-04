@@ -3,6 +3,8 @@
 	width: 100vw;
 	scroll-snap-align: start;
 	background-color: #1c1c1c;
+	padding-top: 40px;
+	padding-left: 40px;
 }
 %title {
 	font-family: 'RFDewiExtended';
@@ -44,4 +46,30 @@
 	text-wrap: nowrap;
 	opacity: 1;
 	cursor: pointer;
+}
+%fifth-image {
+	width: 400px;
+	height: 590px;
+	padding-top: 60px;
+	padding-left: 40px;
+	padding-right: 70px;
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	transition: all 0.5s;
+	&:hover {
+		scale: 1.1;
+		z-index: 50;
+		transition: all 0.5s;
+		.images-info__description {
+			transition: all 0.5s;
+			opacity: 1;
+		}
+		.images-overlay__item {
+			transition: all 0.5s;
+			opacity: 0;
+			scale: 1.1;
+		}
+	}
 }

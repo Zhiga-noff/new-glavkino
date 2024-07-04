@@ -1,0 +1,91 @@
+.fifth-title {
+	@extend %block-title;
+	left: 1150px;
+}
+.images-info {
+	display: flex;
+	justify-content: center;
+	position: relative;
+
+	&__image {
+		&-1 {
+			@extend %fifth-image;
+			background-image: url('/img/fifth-block/1.png');
+			background-color: rgba($color: #000000, $alpha: 0.6);
+			background-blend-mode: multiply;
+			filter: grayscale(100%);
+			&:hover {
+				background-color: rgba($color: #000000, $alpha: 0.3);
+				filter: grayscale(0%);
+			}
+		}
+		&-2 {
+			@extend %fifth-image;
+			background-image: url('/img/fifth-block/2.png');
+			background-color: rgba($color: #000000, $alpha: 0.6);
+			background-blend-mode: multiply;
+			filter: grayscale(100%);
+			&:hover {
+				background-color: rgba($color: #000000, $alpha: 0.3);
+				filter: grayscale(0%);
+			}
+		}
+		&-3 {
+			@extend %fifth-image;
+			background-image: url('/img/fifth-block/3.png');
+			background-color: rgba($color: #000000, $alpha: 0.6);
+			background-blend-mode: multiply;
+			filter: grayscale(100%);
+			&:hover {
+				background-color: rgba($color: #000000, $alpha: 0.3);
+				filter: grayscale(0%);
+			}
+		}
+		&-4 {
+			@extend %fifth-image;
+			background-image: url('/img/fifth-block/4.png');
+			background-color: rgba($color: #000000, $alpha: 0.6);
+			background-blend-mode: multiply;
+			filter: grayscale(100%);
+			&:hover {
+				background-color: rgba($color: #000000, $alpha: 0.3);
+				filter: grayscale(0%);
+			}
+		}
+	}
+	&__overlay {
+		position: absolute;
+		background-color: #000;
+		opacity: 0.5;
+		height: 590px;
+		margin-top: -60px;
+		margin-left: -40px;
+		margin-right: -70px;
+		width: 400px;
+		z-index: 0;
+		transition: all 0.5s;
+
+		&:hover {
+			opacity: 0;
+			z-index: 1000;
+		}
+	}
+
+	&__text {
+		z-index: 100;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+	&__header {
+		@extend %title;
+		font-size: 30px;
+		color: white;
+	}
+	&__description {
+		@extend %description;
+		color: white;
+		opacity: 0;
+	}
+}

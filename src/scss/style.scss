@@ -10,7 +10,12 @@
 
 @import 'third-block.scss';
 @import 'fourth-block.scss';
+@import 'fifth-block.scss';
 
 body {
 	overflow-x: hidden;
+}
+
+.hidden {
+	opacity: 0;
 }
