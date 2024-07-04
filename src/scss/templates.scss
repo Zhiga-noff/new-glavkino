@@ -7,6 +7,12 @@
 %title {
 	font-family: 'RFDewiExtended';
 }
+%block-title {
+	@extend %title;
+	font-size: 120px;
+	position: absolute;
+	opacity: 0.6;
+}
 %description {
 	font-family: 'Nunito Sans';
 	font-optical-sizing: auto;
