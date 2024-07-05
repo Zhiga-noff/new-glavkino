@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.contact-info {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	&__header {
+		@extend %title;
+		font-size: 30px;
+		color: white;
+	}
+	&__people {
+		display: flex;
+		flex-direction: column;
+		gap: 35px;
+	}
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 420px;
+		padding: 40px;
+		border-radius: 10px 0 0 10px;
+		background-color: #1c1c1c;
+	}
+	&__map {
+		width: 830px;
+		border-radius: 0 10px 10px 0;
+		overflow: hidden;
+	}
+}
+.contact {
+	&__name {
+		@extend %title;
+		font-size: 25px;
+		color: white;
+		margin-bottom: 10px;
+	}
+	&__entry {
+		font-family: 'Raleway', sans-serif;
+		color: #bbb;
+		font-size: 16px;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
+		line-height: 20px;
+		letter-spacing: 1.5px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 20px;
+		padding-top: 10px;
+	}
+}
+.position {
+	border-top: rgba($color: #ffffff, $alpha: 0.33) 1px solid;
+	padding-top: 10px;
+
+	&__header {
+		font-family: 'Nunito Sans', sans-serif;
+		font-size: 16px;
+		color: white;
+		margin-bottom: 10px;
+	}
+	&__text {
+		font-family: 'Raleway', sans-serif;
+		color: #bbb;
+		font-size: 12px;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
+		line-height: 13px;
+		letter-spacing: 1.5px;
+	}
+}
