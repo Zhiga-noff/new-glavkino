@@ -13,7 +13,8 @@
 @import 'fifth-block.scss';
 @import 'sixth-block.scss';
 
-body {
+html {
+	overflow-y: hidden;
 	overflow-x: hidden;
 }
 

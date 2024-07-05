@@ -23,20 +23,26 @@
 
 	<body>
 		<div class="block">
-			<div class="block__first">
+			<div class="block__first section">
 				<img
 					class="block__main-logo"
 					src="/img/logo-white.svg"
 					alt="логотип киностудии"
 				/>
 			</div>
-			<div class="block__second">@@include('html/second-block.html',{})</div>
-			<div class="block__third" id="paviloni">@@include('html/third-block.html',{})</div>
-			<div class="block__fourth" id="ploshadki">
+			<div class="block__second section">@@include('html/second-block.html',{})</div>
+			<div class="block__third section" id="paviloni">
+				@@include('html/third-block.html',{})
+			</div>
+			<div class="block__fourth section" id="ploshadki">
 				@@include('html/fourth-block.html',{})
 			</div>
-			<div class="block__fifth" id="dop">@@include('html/fifth-block.html',{})</div>
-			<div class="block__sixth" id="contacts">@@include('html/sixth-block.html',{})</div>
+			<div class="block__fifth section" id="dop">
+				@@include('html/fifth-block.html',{})
+			</div>
+			<div class="block__sixth section" id="contacts">
+				@@include('html/sixth-block.html',{})
+			</div>
 		</div>
 		<!-- Подключаем JS главный -->
 		<script src="js/script.js"></script>

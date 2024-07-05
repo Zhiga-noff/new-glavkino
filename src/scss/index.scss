@@ -1,5 +1,8 @@
 @import 'templates.scss';
 .block {
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	height: 100vh;
 	&__first {
 		@extend %block;
 		background: url('/img/background.png') center center / cover no-repeat;
@@ -122,6 +125,8 @@
 		}
 		&:nth-child(3) {
 			background-image: url('/img/second-block/grid-3.png');
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
 		}
 	}
 
@@ -132,6 +137,7 @@
 	&__description {
 		@extend %description;
 		width: 90%;
+		font-size: 18px;
 	}
 
 	&__overlay-1 {
@@ -144,7 +150,7 @@
 	}
 	&__overlay-3 {
 		@extend %overlay;
-		background-color: rgba(181, 63, 59, 0.7);
+		background-color: rgba(126, 20, 16, 0.6);
 	}
 
 	&__wrapper {
