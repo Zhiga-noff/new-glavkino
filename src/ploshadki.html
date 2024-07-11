@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.min.css" />
+		<title>ГЛАВКИНО: Площадки</title>
+	</head>
+	<body>
+		<div class="main">
+			<div class="main__headers headerL">
+				<h2 class="headerL__title fourth-title">Натурные площадки</h2>
+				<div class="headerL__blogo">
+					<div class="headerL__logo">@@include('html/header.html',{})</div>
+					<div class="headerL__back-button">
+						<a href="index.html" class="headerL__back-link">
+							<img src="/img/back-button-arrow.svg" alt="" />
+							<p>Назад</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="main__choices">
+				<div class="main__list spisok">
+					<div class="spisok__item-1">
+						<h3>Площадка 1</h3>
+						<button id="b1">
+							<img src="/img/forward-button-arrow.svg" alt="" />
+						</button>
+					</div>
+					<div class="spisok__item-2">
+						<h3>Площадка 2</h3>
+						<button id="b2">
+							<img src="/img/forward-button-arrow.svg" alt="" />
+						</button>
+					</div>
+				</div>
+				<div class="main__choosed"></div>
+			</div>
+		</div>
+		<script src="js/ploshadki.js"></script>
+	</body>
+</html>

@@ -1,10 +1,12 @@
 @import 'templates.scss';
 .block {
+	overflow-x: hidden;
 	scroll-snap-type: y mandatory;
 	overflow-y: scroll;
 	height: 100vh;
 	&__first {
 		@extend %block;
+		scroll-snap-align: start;
 		background: url('/img/background.png') center center / cover no-repeat;
 		background-blend-mode: multiply;
 		background-color: rgba(28, 28, 28, 0.6);
@@ -41,7 +43,7 @@
 		display: flex;
 		flex-direction: column;
 		color: white;
-		gap: 268px;
+		gap: 250px;
 	}
 	&__sixth {
 		@extend %block;

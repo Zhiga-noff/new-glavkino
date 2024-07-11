@@ -51,6 +51,14 @@
 		gap: 20px;
 		padding-top: 10px;
 	}
+	&__link {
+		color: #bbb;
+		transition: all 0.3s;
+		&:hover {
+			color: white;
+			scale: 1.1;
+		}
+	}
 }
 .position {
 	border-top: rgba($color: #ffffff, $alpha: 0.33) 1px solid;
