@@ -26,6 +26,10 @@
 	font-optical-sizing: auto;
 	font-size: 16px;
 	font-weight: 500;
+	@media screen and (max-width: 1600px) {
+		font-size: 14px;
+		letter-spacing: -2%;
+	}
 }
 %overlay {
 	padding-top: 75px;
@@ -36,6 +40,11 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	@media screen and (max-width: 1600px) {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 20px;
+	}
 }
 %button {
 	color: white;
@@ -60,11 +69,23 @@
 	}
 }
 %fifth-image {
-	width: 400px;
-	height: 550px;
+	width: calc(100vw * 0.24);
+	height: calc(100vh - 240%);
 	padding-top: 60px;
 	padding-left: 40px;
 	padding-right: 70px;
+
+	@media screen and (max-width: 1600px) {
+		height: calc(100vh * 0.4);
+		width: calc(100vw * 0.45);
+		padding-top: 50px;
+		padding-left: 30px;
+		&:target {
+			scale: 1.1;
+			transition: all 0.5s;
+			z-index: 50;
+		}
+	}
 
 	background-size: cover;
 	background-repeat: no-repeat;

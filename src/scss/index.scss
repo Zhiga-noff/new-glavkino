@@ -1,9 +1,11 @@
 @import 'templates.scss';
+
 .block {
 	overflow-x: hidden;
 	scroll-snap-type: y mandatory;
 	overflow-y: scroll;
 	height: 100vh;
+
 	&__first {
 		@extend %block;
 		scroll-snap-align: start;
@@ -15,45 +17,50 @@
 		justify-content: center;
 		align-items: center;
 	}
-	&__second {
-		@extend %block;
-		display: flex;
-		flex-direction: row;
-		color: white;
-		gap: 230px;
-		padding: 0;
+	&__sixth {
+		background: url('/img/background.png') center center / cover no-repeat;
+		background-blend-mode: multiply;
+		background-color: rgba(28, 28, 28, 0.6);
 	}
-	&__third {
-		@extend %block;
-		display: flex;
-		flex-direction: row;
-		color: white;
-		gap: 150px;
-	}
-	&__fourth {
+
+	&__second,
+	&__third,
+	&__fourth,
+	&__fifth,
+	&__sixth {
 		@extend %block;
 		display: flex;
 		flex-direction: column;
 		color: white;
 		gap: 80px;
-		padding-left: 0;
+		padding: 0;
+	}
+	&__second {
+		flex-direction: row;
+
+		@media screen and (max-width: 1600px) {
+			flex-direction: column;
+		}
+	}
+	&__third,
+	&__fourth,
+	&__fifth,
+	&__sixth {
+		padding-top: 40px;
+		padding-left: 40px;
 	}
 	&__fifth {
-		@extend %block;
-		display: flex;
-		flex-direction: column;
-		color: white;
-		gap: 250px;
+		@media screen and (max-width: 1600px) {
+			gap: 40px;
+		}
 	}
-	&__sixth {
-		@extend %block;
-		background: url('/img/background.png') center center / cover no-repeat;
-		background-blend-mode: multiply;
-		background-color: rgba(28, 28, 28, 0.6);
-		display: flex;
-		flex-direction: column;
-		color: white;
-		gap: 60px;
+
+	&__second {
+		padding-right: 0;
+	}
+
+	&__fourth {
+		padding-left: 0;
 	}
 }
 
@@ -62,21 +69,35 @@
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
-	padding-left: 40px;
-	padding-top: 40px;
-	padding-bottom: 50px;
+	padding: 40px;
+
+	@media screen and (min-width: 1600px) {
+		padding-bottom: 0;
+	}
+
 	&__title {
 		@extend %title;
 		font-size: 40px;
+
+		@media screen and (max-width: 1600px) {
+			line-height: 48px;
+		}
 	}
+
 	&__text {
 		@extend %description;
 		display: flex;
-		gap: 40px;
+		gap: 10px;
 		flex-direction: column;
 		max-width: 900px;
 	}
+
+	@media screen and (max-width: 1600px) {
+		max-height: 36%;
+		gap: 40px;
+	}
 }
+
 .button {
 	@extend %button;
 }
@@ -86,11 +107,13 @@
 	gap: 13px;
 	flex-direction: column;
 	max-width: 436px;
+
 	&__links {
 		display: flex;
 		justify-content: space-between;
 		max-width: 436px;
 	}
+
 	&__link {
 		font-family: 'Nunito Sans', sans-serif;
 		font-optical-sizing: auto;
@@ -100,7 +123,7 @@
 		transition: all 0.3s;
 
 		&:hover {
-			color: antiquewhite;
+			color: white;
 			scale: 1.1;
 		}
 	}
@@ -109,12 +132,18 @@
 .services {
 	width: 100%;
 	height: 100vh;
+
+	@media screen and (max-width: 1600px) {
+		height: 60%;
+	}
+
 	&__grid {
 		display: grid;
 		grid-template-columns: 57% 43%;
 		grid-template-rows: 41% 59%;
-		height: 100vh;
+		height: 100%;
 	}
+
 	&__grid-item {
 		&:nth-child(1) {
 			grid-row-start: 1;
@@ -122,9 +151,11 @@
 
 			background: url('/img/second-block/grid-1.png') center center / cover no-repeat;
 		}
+
 		&:nth-child(2) {
 			background: url('/img/second-block/grid-2.png') center center / cover no-repeat;
 		}
+
 		&:nth-child(3) {
 			background-image: url('/img/second-block/grid-3.png');
 			background-size: 100% 100%;
@@ -136,20 +167,33 @@
 		@extend %title;
 		font-size: 30px;
 	}
+
 	&__description {
 		@extend %description;
 		width: 90%;
 		font-size: 18px;
+
+		@media screen and (max-width: 1600px) {
+			font-size: 14px;
+		}
+	}
+
+	.button {
+		@media screen and (max-width: 1600px) {
+			scale: 0.7;
+		}
 	}
 
 	&__overlay-1 {
 		@extend %overlay;
 		background-color: rgba(8, 36, 63, 0.6);
 	}
+
 	&__overlay-2 {
 		@extend %overlay;
 		background-color: rgba(8, 36, 63, 0.5);
 	}
+
 	&__overlay-3 {
 		@extend %overlay;
 		background-color: rgba(126, 20, 16, 0.6);
@@ -160,8 +204,10 @@
 		flex-direction: column;
 		gap: 50px;
 	}
+
 	&__button {
 		transition: all 0.3s;
+
 		&:hover {
 			scale: 1.1;
 			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -172,10 +218,12 @@
 .numbered-item {
 	display: flex;
 	gap: 50px;
+
 	&__number {
 		@extend %title;
 		font-size: 60px;
 	}
+
 	&__text {
 		@extend %description;
 		font-size: 18px;

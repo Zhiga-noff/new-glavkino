@@ -3,6 +3,9 @@
 	gap: 280px;
 	display: flex;
 	flex-direction: column;
+	@media screen and (max-width: 1600px) {
+		gap: 70px;
+	}
 	&__header {
 		gap: 700px;
 		display: flex;
@@ -17,6 +20,16 @@
 		display: flex;
 		flex-direction: row;
 		gap: 180px;
+		@media screen and (max-width: 1600px) {
+			flex-direction: column;
+			gap: 20px;
+		}
+		.numbered-item {
+			&__number {
+				width: 85px;
+				text-align: center;
+			}
+		}
 	}
 }
 .image-info {

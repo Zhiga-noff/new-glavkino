@@ -25,13 +25,19 @@
 	&__item {
 		&-lg {
 			height: 524px;
-			width: 759px;
+			width: 767px;
 			background: url('/img/third-block/map.png') center center / cover no-repeat;
+			@media screen and (max-width: 1600px) {
+				display: none;
+			}
 		}
 		&-md {
 			height: 255px;
 			width: 373px;
 			background: url('/img/third-block/p1.png') center center / cover no-repeat;
+			@media screen and (max-width: 1600px) {
+				background: url('/img/third-block/map.png') center center / cover no-repeat;
+			}
 		}
 		&-sm {
 			max-height: 81px;
@@ -40,21 +46,33 @@
 				background: url('/img/third-block/p2.png') center center / cover no-repeat;
 				height: 117px;
 				width: 173px;
+				@media screen and (max-width: 1600px) {
+					background: url('/img/third-block/p1.png') center center / cover no-repeat;
+				}
 			}
 			&2 {
 				background: url('/img/third-block/p3.png') center center / cover no-repeat;
 				height: 117px;
 				width: 173px;
+				@media screen and (max-width: 1600px) {
+					background: url('/img/third-block/p2.png') center center / cover no-repeat;
+				}
 			}
 			&3 {
 				background: url('/img/third-block/p4.png') center center / cover no-repeat;
 				height: 117px;
 				width: 173px;
+				@media screen and (max-width: 1600px) {
+					background: url('/img/third-block/p3.png') center center / cover no-repeat;
+				}
 			}
 			&4 {
 				background: url('/img/third-block/p5.png') center center / cover no-repeat;
 				height: 117px;
 				width: 173px;
+				@media screen and (max-width: 1600px) {
+					background: url('/img/third-block/p4.png') center center / cover no-repeat;
+				}
 			}
 		}
 	}
@@ -69,12 +87,15 @@
 		font-size: 140px;
 		opacity: 0.6;
 	}
+	@media screen and (max-width: 1600px) {
+		padding-top: 0;
+	}
 }
 
 .information {
 	display: flex;
 	flex-direction: column;
-	gap: 50px;
+	gap: 30px;
 }
 
 .third-title {
