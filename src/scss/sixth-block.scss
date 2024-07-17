@@ -4,13 +4,17 @@
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
-	margin-right: 40px;
+
 	@media screen and (max-width: 1600px) {
 		flex-direction: column-reverse;
 		width: calc(100vw - 80px);
 		height: calc(100dvh - 300px);
 		border-radius: 10px;
 		overflow: hidden;
+	}
+	@media screen and (max-width: 750px) {
+		height: auto;
+		width: calc(100vw - 30px);
 	}
 	&__header {
 		@extend %title;
@@ -22,6 +26,13 @@
 			grid-row-start: 1;
 			grid-row-end: 2;
 		}
+		@media screen and (max-width: 750px) {
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 1;
+			grid-row-end: 2;
+			font-size: 20px;
+		}
 	}
 	&__people {
 		display: flex;
@@ -32,6 +43,13 @@
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: auto auto;
+		}
+		@media screen and (max-width: 750px) {
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: auto auto auto;
+			gap: 15px;
 		}
 	}
 	&__contacts {
@@ -46,6 +64,13 @@
 			width: 100%;
 			border-radius: 0;
 		}
+		@media screen and (max-width: 750px) {
+			width: 100%;
+			border-radius: 0;
+			height: calc(100vh * 0.65);
+			padding: 10px;
+			padding-left: 20px;
+		}
 	}
 	&__position {
 		margin-top: 20px;
@@ -57,6 +82,9 @@
 		overflow: hidden;
 		@media screen and (max-width: 1600px) {
 			border-radius: 0;
+		}
+		@media screen and (max-width: 750px) {
+			height: calc(100vh * 0.2);
 		}
 		&-frame {
 			width: 100%;
@@ -70,6 +98,9 @@
 		font-size: 25px;
 		color: white;
 		margin-bottom: 10px;
+		@media screen and (max-width: 750px) {
+			font-size: 17px;
+		}
 	}
 	&__entry {
 		font-family: 'Raleway', sans-serif;
@@ -85,6 +116,13 @@
 		align-items: center;
 		gap: 20px;
 		padding-top: 10px;
+		@media screen and (max-width: 750px) {
+			font-size: 13px;
+			gap: 10px;
+			padding-top: 5px;
+			line-height: 15px;
+			later-spacing: 1px;
+		}
 	}
 	&__link {
 		color: #bbb;

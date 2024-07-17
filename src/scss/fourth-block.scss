@@ -28,6 +28,16 @@
 			&__number {
 				width: 85px;
 				text-align: center;
+				@media screen and (max-width: 750px) {
+					font-size: 20px;
+				}
+			}
+
+			&__text {
+				@media screen and (max-width: 750px) {
+					font-size: 12px;
+					line-height: 15px;
+				}
 			}
 		}
 	}

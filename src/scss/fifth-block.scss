@@ -10,6 +10,14 @@
 		flex-wrap: wrap;
 		gap: 20px;
 	}
+	@media screen and (max-height: 800px) {
+		gap: 0;
+	}
+
+	@media screen and (max-width: 750px) {
+		margin-left: -40px;
+		margin-right: -40px;
+	}
 
 	&__image {
 		&-1 {

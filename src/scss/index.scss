@@ -1,5 +1,49 @@
 @import 'templates.scss';
 
+$block-background: url('/img/background.png') center center / cover no-repeat;
+$block-background-blend-mode: multiply;
+$block-background-color: rgba(28, 28, 28, 0.6);
+
+$block-flex-direction: column;
+$block-color: white;
+$block-gap: 80px;
+$block-padding: 40px;
+$block-padding-mobile: 15px;
+$block-gap-mobile: 25px;
+
+$info-color: #bbbbbb;
+$info-padding: 40px;
+$info-gap: 40px;
+$info-gap-mobile: calc(100vh * 0.01);
+$info-title-font-size: 40px;
+$info-title-line-height: 48px;
+$info-title-font-size-mobile: 30px;
+$info-title-line-height-mobile: 28px;
+$info-text-max-width: 900px;
+
+$header-gap: 13px;
+$header-max-width: 436px;
+$header-max-width-mobile: calc(100vw - 80px);
+$header-link-font-size: 16px;
+$header-link-color: #bbbbbb;
+$header-link-color-hover: white;
+
+$services-grid-template-columns: 57% 43%;
+$services-grid-template-rows: 41% 59%;
+$services-grid-template-columns-mobile: 1fr;
+$services-grid-template-rows-mobile: 1fr 1fr 1fr;
+$services-title-font-size: 30px;
+$services-description-font-size: 18px;
+$services-description-font-size-mobile: 14px;
+$services-button-scale-mobile: 0.7;
+
+$numbered-item-gap: 50px;
+$numbered-item-number-font-size: 60px;
+$numbered-item-text-font-size: 18px;
+$numbered-item-text-color: #bbbbbb;
+$numbered-item-text-max-width: 750px;
+$numbered-item-text-line-height: 30px;
+
 .block {
 	overflow-x: hidden;
 	scroll-snap-type: y mandatory;
@@ -9,18 +53,18 @@
 	&__first {
 		@extend %block;
 		scroll-snap-align: start;
-		background: url('/img/background.png') center center / cover no-repeat;
-		background-blend-mode: multiply;
-		background-color: rgba(28, 28, 28, 0.6);
-
+		background: $block-background;
+		background-blend-mode: $block-background-blend-mode;
+		background-color: $block-background-color;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
+
 	&__sixth {
-		background: url('/img/background.png') center center / cover no-repeat;
-		background-blend-mode: multiply;
-		background-color: rgba(28, 28, 28, 0.6);
+		background: $block-background;
+		background-blend-mode: $block-background-blend-mode;
+		background-color: $block-background-color;
 	}
 
 	&__second,
@@ -30,64 +74,93 @@
 	&__sixth {
 		@extend %block;
 		display: flex;
-		flex-direction: column;
-		color: white;
-		gap: 80px;
-		padding: 0;
+		flex-direction: $block-flex-direction;
+		color: $block-color;
+		gap: $block-gap;
+		padding: $block-padding;
+
+		@media screen and (max-height: 800px) {
+			padding: $block-padding-mobile;
+			gap: $block-gap-mobile;
+		}
 	}
+
 	&__second,
 	&__third {
 		flex-direction: row;
 
 		@media screen and (max-width: 1600px) {
-			flex-direction: column;
-		}
-	}
-	&__third,
-	&__fourth,
-	&__fifth,
-	&__sixth {
-		padding-top: 40px;
-		padding-left: 40px;
-	}
-	&__fifth {
-		@media screen and (max-width: 1600px) {
-			gap: 40px;
+			flex-direction: $block-flex-direction;
 		}
 	}
 
 	&__second {
 		padding-right: 0;
+		padding-top: 0;
+		padding: 0;
 	}
 
 	&__fourth {
 		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 0;
+	}
+
+	&__sixth {
+		@media screen and (max-width: 750px) {
+			gap: $info-gap-mobile;
+		}
 	}
 
 	&__third {
-		@media screen and (max-height: 850px) {
-			gap: 20px;
+		gap: 150px;
+		@media screen and (max-height: 800px) {
+			gap: $block-gap-mobile;
 		}
 	}
 }
 
+.block__main-logo {
+	height: auto;
+	width: auto;
+
+	@media screen and (max-width: 750px) {
+		width: $header-max-width-mobile;
+	}
+}
+
 .info {
-	color: #bbbbbb;
+	color: $info-color;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
-	padding: 40px;
+	padding: $info-padding;
 
 	@media screen and (min-width: 1600px) {
 		padding-bottom: 0;
 	}
 
+	@media screen and (max-width: 1600px) {
+		max-height: 36%;
+		gap: $info-gap;
+	}
+
+	@media screen and (max-width: 750px) {
+		gap: $info-gap-mobile;
+		padding: 20px;
+	}
+
 	&__title {
 		@extend %title;
-		font-size: 40px;
+		font-size: $info-title-font-size;
 
 		@media screen and (max-width: 1600px) {
-			line-height: 48px;
+			line-height: $info-title-line-height;
+		}
+
+		@media screen and (max-width: 932px) {
+			font-size: 20px;
+			line-height: 20px;
 		}
 	}
 
@@ -96,12 +169,7 @@
 		display: flex;
 		gap: 10px;
 		flex-direction: column;
-		max-width: 900px;
-	}
-
-	@media screen and (max-width: 1600px) {
-		max-height: 36%;
-		gap: 40px;
+		max-width: $info-text-max-width;
 	}
 }
 
@@ -111,26 +179,46 @@
 
 .header {
 	display: flex;
-	gap: 13px;
+	gap: $header-gap;
 	flex-direction: column;
-	max-width: 436px;
+	max-width: $header-max-width;
+
+	@media screen and (max-width: 750px) {
+		max-width: $header-max-width-mobile;
+	}
 
 	&__links {
 		display: flex;
 		justify-content: space-between;
-		max-width: 436px;
+		max-width: $header-max-width;
+
+		@media screen and (max-width: 750px) {
+			max-width: $header-max-width-mobile;
+		}
+
+		@media screen and (max-width: 550px) {
+			display: none;
+		}
+	}
+
+	&__logo {
+		img {
+			@media screen and (max-width: 750px) {
+				width: $header-max-width-mobile;
+			}
+		}
 	}
 
 	&__link {
 		font-family: 'Nunito Sans', sans-serif;
 		font-optical-sizing: auto;
-		font-size: 16px;
+		font-size: $header-link-font-size;
 		font-weight: 500;
-		color: #bbbbbb;
+		color: $header-link-color;
 		transition: all 0.3s;
 
 		&:hover {
-			color: white;
+			color: $header-link-color-hover;
 			scale: 1.1;
 		}
 	}
@@ -140,21 +228,36 @@
 	width: 100%;
 	height: 100vh;
 
-	@media screen and (max-width: 1600px) {
-		height: 60%;
+	.button {
+		@media screen and (((max-height: 1100px) and (max-width: 750px)) or (max-width: 550px)) {
+			display: none;
+		}
+	}
+
+	@media screen and (max-height: 770px) {
+		max-height: calc(100vh * 0.7);
 	}
 
 	&__grid {
 		display: grid;
-		grid-template-columns: 57% 43%;
-		grid-template-rows: 41% 59%;
+		grid-template-columns: $services-grid-template-columns;
+		grid-template-rows: $services-grid-template-rows;
 		height: 100%;
+
+		@media screen and (max-width: 750px) {
+			grid-template-columns: $services-grid-template-columns-mobile;
+			grid-template-rows: $services-grid-template-rows-mobile;
+		}
 	}
 
 	&__grid-item {
 		&:nth-child(1) {
 			grid-row-start: 1;
 			grid-row-end: 3;
+
+			@media screen and (max-height: 1100px) and (max-width: 750px) {
+				grid-row: inherit;
+			}
 
 			background: url('/img/second-block/grid-1.png') center center / cover no-repeat;
 		}
@@ -172,22 +275,29 @@
 
 	&__title {
 		@extend %title;
-		font-size: 30px;
+		font-size: $services-title-font-size;
+
+		@media screen and (max-width: 1000px) {
+			font-size: 18px;
+		}
 	}
 
 	&__description {
 		@extend %description;
 		width: 90%;
-		font-size: 18px;
+		font-size: $services-description-font-size;
 
 		@media screen and (max-width: 1600px) {
-			font-size: 14px;
+			font-size: $services-description-font-size-mobile;
+		}
+		@media screen and (max-width: 1000px) {
+			font-size: 12px;
 		}
 	}
 
 	.button {
 		@media screen and (max-width: 1600px) {
-			scale: 0.7;
+			scale: $services-button-scale-mobile;
 		}
 	}
 
@@ -210,10 +320,17 @@
 		display: flex;
 		flex-direction: column;
 		gap: 50px;
+
+		@media screen and (max-height: 1100px) {
+			gap: 10px;
+		}
 	}
 
 	&__button {
 		transition: all 0.3s;
+
+		@media screen and (max-height: 1100px) {
+		}
 
 		&:hover {
 			scale: 1.1;
@@ -224,18 +341,18 @@
 
 .numbered-item {
 	display: flex;
-	gap: 50px;
+	gap: $numbered-item-gap;
 
 	&__number {
 		@extend %title;
-		font-size: 60px;
+		font-size: $numbered-item-number-font-size;
 	}
 
 	&__text {
 		@extend %description;
-		font-size: 18px;
-		color: #bbbbbb;
-		max-width: 750px;
-		line-height: 30px;
+		font-size: $numbered-item-text-font-size;
+		color: $numbered-item-text-color;
+		max-width: $numbered-item-text-max-width;
+		line-height: $numbered-item-text-line-height;
 	}
 }

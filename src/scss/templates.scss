@@ -45,6 +45,11 @@
 		padding-bottom: 20px;
 		padding-left: 20px;
 	}
+	@media screen and (max-width: 1000px) {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 10px;
+	}
 }
 %button {
 	color: white;
@@ -67,6 +72,11 @@
 		background-color: #d34843;
 		transition: all 0.5s;
 	}
+	@media screen and (max-width: 750px) {
+		font-size: 16px;
+		gap: 10px;
+		padding: 10px 15px 10px 15px;
+	}
 }
 %fifth-image {
 	width: calc(100vw * 0.24);
@@ -87,6 +97,30 @@
 		}
 	}
 
+	@media screen and (max-height: 800px) {
+		width: 100dvw;
+		height: calc(100vh * 0.2);
+		&:target {
+			scale: 1;
+			transition: all 0.5s;
+			z-index: 50;
+		}
+		&:hover {
+			scale: 1;
+			z-index: 50;
+			transition: all 0.5s;
+			.images-info__description {
+				transition: all 0.5s;
+				opacity: 1;
+			}
+			.images-overlay__item {
+				transition: all 0.5s;
+				opacity: 0;
+				scale: 1.1;
+			}
+		}
+	}
+
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -103,6 +137,9 @@
 			transition: all 0.5s;
 			opacity: 0;
 			scale: 1.1;
+		}
+		@media screen and (max-height: 800px) {
+			height: calc(20vh + 5vh);
 		}
 	}
 }
