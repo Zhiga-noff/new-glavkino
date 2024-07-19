@@ -5,8 +5,8 @@
 	overflow: hidden;
 	scroll-snap-align: start;
 	background-color: #1c1c1c;
-	padding-top: 40px;
-	padding-left: 40px;
+	padding-top: 2.5rem;
+	padding-left: 2.5rem;
 	position: relative;
 	overflow-x: hidden;
 	max-height: 100dvh;
@@ -24,43 +24,31 @@
 %description {
 	font-family: 'Nunito Sans';
 	font-optical-sizing: auto;
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 500;
-	@media screen and (max-width: 1600px) {
-		font-size: 14px;
-		letter-spacing: -2%;
-	}
 }
 %overlay {
-	padding-top: 75px;
-	padding-left: 40px;
-	padding-bottom: 50px;
+	padding-top: 4.6875rem;
+	padding-left: 2.5rem;
+	padding-bottom: 3.125rem;
 	width: 100%;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	@media screen and (max-width: 1600px) {
-		padding-top: 20px;
-		padding-bottom: 20px;
-		padding-left: 20px;
-	}
-	@media screen and (max-width: 1000px) {
-		padding-top: 10px;
-		padding-bottom: 10px;
-		padding-left: 10px;
-	}
+	position: relative;
+	z-index: 2;
 }
 %button {
 	color: white;
 	font-family: 'RFDewiExtended';
-	font-size: 20px;
+	font-size: 1rem;
 	background-color: #e2241d;
 	display: flex;
 	justify-content: space-between;
-	padding: 20px;
+	padding: 1.25rem;
 	width: min-content;
-	gap: 70px;
+	gap: 4.375rem;
 	height: min-content;
 	align-items: center;
 	text-wrap: nowrap;
@@ -72,24 +60,21 @@
 		background-color: #d34843;
 		transition: all 0.5s;
 	}
-	@media screen and (max-width: 750px) {
-		font-size: 16px;
-		gap: 10px;
-		padding: 10px 15px 10px 15px;
-	}
 }
 %fifth-image {
-	width: calc(100vw * 0.24);
+	width: 24vw;
 	height: calc(100vh - 240%);
-	padding-top: 60px;
-	padding-left: 40px;
-	padding-right: 70px;
+	padding-top: 3.75rem;
+	padding-left: 2.5rem;
+	padding-right: 4.375rem;
+
+	position: relative;
+	width: 100%;
+	height: auto;
 
 	@media screen and (max-width: 1600px) {
-		height: calc(100vh * 0.4);
-		width: calc(100vw * 0.45);
-		padding-top: 50px;
-		padding-left: 30px;
+		height: 40vh;
+		width: 45vw;
 		&:target {
 			scale: 1.1;
 			transition: all 0.5s;
@@ -99,7 +84,7 @@
 
 	@media screen and (max-height: 800px) {
 		width: 100dvw;
-		height: calc(100vh * 0.2);
+		height: 20vh;
 		&:target {
 			scale: 1;
 			transition: all 0.5s;
@@ -139,7 +124,7 @@
 			scale: 1.1;
 		}
 		@media screen and (max-height: 800px) {
-			height: calc(20vh + 5vh);
+			height: 25vh;
 		}
 	}
 }

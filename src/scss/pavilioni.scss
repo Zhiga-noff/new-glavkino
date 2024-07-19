@@ -2,37 +2,37 @@
 	@extend %block;
 	display: flex;
 	flex-direction: column;
-	gap: 85px;
+	gap: 5.3125rem;
 
 	&__choices {
 		display: flex;
 		flex-direction: row;
-		gap: 40px;
+		gap: 2.5rem;
 	}
 	&__choosed {
 		position: relative;
 		z-index: 1;
-		height: calc(100vh - (152px + 60px + 85px));
+		height: calc(100vh - 18.625rem);
 		width: 100%;
-		margin-right: 40px;
+		margin-right: 2.5rem;
 		border-radius: 0 10px 10px 0;
 		overflow: hidden;
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
+		gap: 1.25rem;
 		justify-content: end;
 		align-items: start;
 		color: white;
-		padding: 40px;
+		padding: 2.5rem;
 
 		&-header {
 			@extend %title;
-			font-size: 40px;
+			font-size: 2.5rem;
 		}
 
 		&-text {
 			@extend %description;
-			font-size: 20px;
+			font-size: 1.25rem;
 		}
 	}
 }
@@ -50,11 +50,11 @@
 		width: max-content;
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
+		gap: 1.25rem;
 	}
 
 	&__logo {
-		height: 72px;
+		height: 4.5rem;
 		overflow: hidden;
 	}
 
@@ -64,44 +64,52 @@
 		justify-content: end;
 		align-items: center;
 		background: #e2241d;
-		gap: 30px;
-		padding: 20px 20px;
+		gap: 1.875rem;
+		padding: 1.25rem 1.25rem;
+		transition: all 0.5s;
 
 		& p {
 			@extend %title;
-			font-size: 20px;
+			font-size: 1.25rem;
 			color: white;
 			display: block;
+		}
+
+		&:hover {
+			scale: 1.05;
+			background-color: #d34843;
+			transition: all 0.5s;
 		}
 	}
 }
 
 %item {
 	@extend %title;
+	cursor: pointer;
 
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	font-size: 40px;
+	font-size: 2.5rem;
 	border-radius: 10px;
-	padding-left: 50px;
+	padding-left: 3.125rem;
 	color: white;
 	overflow: hidden;
 	flex-shrink: 0;
 
 	& button {
 		background: #e21d1d;
-		padding: 20px;
+		padding: 1.25rem;
 		align-self: self-end;
 	}
-	height: 220px;
+	height: 21.25rem;
 }
 
 .spisok {
-	width: 550px;
+	width: 34.375rem;
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 1.25rem;
 	overflow: scroll;
 	height: calc(100vh - (152px + 60px + 85px));
 	scrollbar-gutter: stable;

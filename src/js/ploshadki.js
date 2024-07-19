@@ -5,6 +5,17 @@ const button2 = document.getElementById('b2');
 
 const buttons = [button1, button2];
 
+const initialChoosed = () => {
+	choosedContainer.innerHTML = `
+        <h3 class="main__choosed-header">Натурная площадка 1</h3>
+        <p class="main__choosed-text">Кино-телекомплекс включает в себя 9 съемочных павильонов от 133м2 до 3082м2. Павильоны отвечают всем требованиям индустрии кино и телевидения. Каждый павильон оборудован автономной системой кондиционирования.</p>
+        `;
+	choosedContainer.style.background = `url('/img/ploshadki/1.png') center center / cover no-repeat`;
+	choosedContainer.style.backgroundBlendMode = 'multiply';
+	choosedContainer.style.backgroundColor = 'rgba(28, 28, 28, 0.6)';
+};
+initialChoosed();
+
 buttons.forEach((button) => {
 	button.addEventListener('click', () => {
 		choosedContainer.innerHTML = `

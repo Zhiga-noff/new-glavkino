@@ -6,17 +6,18 @@
 	display: flex;
 	justify-content: center;
 	position: relative;
+	height: 60vh;
 	@media screen and (max-width: 1600px) {
 		flex-wrap: wrap;
-		gap: 20px;
+		gap: 1.25rem;
 	}
 	@media screen and (max-height: 800px) {
 		gap: 0;
 	}
 
 	@media screen and (max-width: 750px) {
-		margin-left: -40px;
-		margin-right: -40px;
+		margin-left: -2.5rem;
+		margin-right: -2.5rem;
 	}
 
 	&__image {
@@ -69,11 +70,11 @@
 		position: absolute;
 		background-color: #000;
 		opacity: 0.5;
-		height: 590px;
-		margin-top: -60px;
-		margin-left: -40px;
-		margin-right: -70px;
-		width: 400px;
+		height: 36.875rem;
+		margin-top: -3.75rem;
+		margin-left: -2.5rem;
+		margin-right: -4.375rem;
+		width: 25rem;
 		z-index: 0;
 		transition: all 0.5s;
 
@@ -88,11 +89,11 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		gap: 30px;
+		gap: 1.875rem;
 	}
 	&__header {
 		@extend %title;
-		font-size: 30px;
+		font-size: 1.875rem;
 		color: white;
 	}
 	&__description {
