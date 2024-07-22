@@ -7,18 +7,6 @@
 	justify-content: center;
 	position: relative;
 	height: 60vh;
-	@media screen and (max-width: 1600px) {
-		flex-wrap: wrap;
-		gap: 1.25rem;
-	}
-	@media screen and (max-height: 800px) {
-		gap: 0;
-	}
-
-	@media screen and (max-width: 750px) {
-		margin-left: -2.5rem;
-		margin-right: -2.5rem;
-	}
 
 	&__image {
 		&-1 {

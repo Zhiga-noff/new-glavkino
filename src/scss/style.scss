@@ -1,3 +1,5 @@
+@import 'variables.scss';
+
 @import 'nullstyle.scss';
 @import 'templates.scss';
 
@@ -21,18 +23,22 @@ html {
 	scrollbar-color: #e2241d #1c1c1c;
 
 	font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (1920 - 320)));
-
-	scrollbar-width: 0.1875rem;
-
-	&::-webkit-scrollbar {
-		width: 0.1875rem;
+	@media screen and (max-width: $tablet) {
+		font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (992 - 320)));
 	}
+	@media screen and (max-width: $mobile) {
+		font-size: calc(10px + (10 - 10) * ((100vw - 320px) / (639 - 320)));
+	}
+
 	&::-webkit-scrollbar-track {
 		background-color: #1c1c1c;
 	}
 	&::-webkit-scrollbar-thumb {
 		background-color: #e2241d;
-		border-radius: 0.625rem;
+		border-radius: 5px;
+	}
+	&::-webkit-scrollbar {
+		width: 1px;
 	}
 }
 
