@@ -3,8 +3,11 @@
 	right: -2.5rem;
 	@media screen and (max-width: $tablet) {
 		transform: rotate(-90deg);
-		right: -17.5rem;
+		right: -19.5rem;
 		bottom: 39rem;
+	}
+	@media screen and (max-width: $mobile) {
+		right: -10.5rem;
 	}
 }
 .images-info {
@@ -17,6 +20,7 @@
 		flex-wrap: wrap;
 		height: 100%;
 		margin-top: 40px;
+		gap: 1.25rem;
 	}
 
 	@media screen and (max-width: $mobile) {
@@ -43,7 +47,7 @@
 				filter: grayscale(0%);
 			}
 			@media screen and (max-width: $tablet) {
-				flex: 0 0 48%;
+				flex: 0 0 45%;
 			}
 		}
 		&-2 {
@@ -57,7 +61,7 @@
 				filter: grayscale(0%);
 			}
 			@media screen and (max-width: $tablet) {
-				flex: 0 0 48%;
+				flex: 0 0 45%;
 			}
 		}
 		&-3 {
@@ -71,7 +75,7 @@
 				filter: grayscale(0%);
 			}
 			@media screen and (max-width: $tablet) {
-				flex: 0 0 48%;
+				flex: 0 0 45%;
 			}
 		}
 		&-4 {
@@ -85,7 +89,7 @@
 				filter: grayscale(0%);
 			}
 			@media screen and (max-width: $tablet) {
-				flex: 0 0 48%;
+				flex: 0 0 45%;
 			}
 		}
 	}
