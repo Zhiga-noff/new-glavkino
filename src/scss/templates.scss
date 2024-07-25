@@ -9,15 +9,21 @@
 	overflow-x: hidden;
 	max-height: 100vh;
 	max-width: 100dvw;
+	@media screen and (max-width: $mobile) {
+		padding: 1rem;
+	}
 }
 %title {
 	font-family: 'RFDewiExtended';
 }
 %block-title {
 	@extend %title;
-	font-size: 120px;
+	font-size: 7.5rem;
 	position: absolute;
 	opacity: 0.6;
+	@media screen and (max-width: $mobile) {
+		font-size: 4rem;
+	}
 }
 %description {
 	font-family: 'Nunito Sans';
@@ -36,6 +42,9 @@
 	justify-content: space-between;
 	position: relative;
 	z-index: 2;
+	@media screen and (max-width: $tablet) {
+		padding: 1.25rem;
+	}
 	@media screen and (max-width: $mobile) {
 		padding: 1rem;
 	}
@@ -47,7 +56,7 @@
 	background-color: #e2241d;
 	display: flex;
 	justify-content: space-between;
-	padding: 1.25rem;
+
 	width: min-content;
 	gap: 4.375rem;
 	height: min-content;
@@ -56,10 +65,19 @@
 	opacity: 1;
 	cursor: pointer;
 	transition: all 0.5s;
+	padding-left: 1.56rem;
+	padding-top: 0.9rem;
+	padding-bottom: 0.9rem;
+	padding-right: 1.25rem;
 	&:hover {
 		scale: 1.05;
 		background-color: #d34843;
 		transition: all 0.5s;
+	}
+	@media screen and (max-width: $mobile) {
+		font-size: 1.2rem;
+		gap: 2rem;
+		padding: 1rem 2rem;
 	}
 }
 %fifth-image {

@@ -21,15 +21,13 @@
 	</head>
 	<!-- Отображаемое тело страницы -->
 
-	<body>
+	<main>
 		<div class="block">
-			<div class="block__first section">
-				<img
-					class="block__main-logo"
-					src="/img/logo-white.svg"
-					alt="логотип киностудии"
-				/>
-			</div>
+			<header class="block__first section">
+				<div class="block__main-logo">
+					<img width="100%" src="/img/logo-white.svg" alt="логотип киностудии" />
+				</div>
+			</header>
 			<div class="block__second section">@@include('html/second-block.html',{})</div>
 			<div class="block__third section" id="paviloni">
 				@@include('html/third-block.html',{})
@@ -40,13 +38,13 @@
 			<div class="block__fifth section" id="dop">
 				@@include('html/fifth-block.html',{})
 			</div>
-			<div class="block__sixth section" id="contacts">
+			<footer class="block__sixth section" id="contacts">
 				@@include('html/sixth-block.html',{})
-			</div>
+			</footer>
 		</div>
 		<!-- Подключаем JS главный -->
 		<script src="js/script.js"></script>
 
 		<script src="js/smooth-scroll.js"></script>
-	</body>
+	</main>
 </html>

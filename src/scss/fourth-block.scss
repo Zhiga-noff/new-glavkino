@@ -9,6 +9,7 @@
 	@media screen and (max-width: $mobile) {
 		margin: 1rem;
 		margin-bottom: 6rem;
+		gap: 2rem;
 	}
 
 	&__header {
@@ -34,9 +35,6 @@
 			&__number {
 				width: 5.3125rem;
 				text-align: center;
-				@media screen and (max-width: 750px) {
-					font-size: 1.25rem;
-				}
 			}
 
 			&__text {
@@ -68,5 +66,10 @@
 }
 .fourth-title {
 	@extend %block-title;
-	left: 1300px;
+	right: -2.5rem;
+	@media screen and (max-width: $tablet) {
+		transform: rotate(-90deg);
+		right: -13.5rem;
+		bottom: 38rem;
+	}
 }

@@ -35,7 +35,9 @@
 		display: flex;
 		flex-direction: column;
 		padding: 1.25rem;
-		justify-content: space-around;
+		@media screen and (max-width: $mobile) {
+			gap: 3rem;
+		}
 	}
 
 	&__fifth {
@@ -57,12 +59,11 @@
 
 	&__second {
 		padding: 0;
+		justify-content: space-between;
 	}
 
 	&__fourth {
-		padding-left: 0;
-		padding-right: 0;
-		padding-bottom: 0;
+		padding: 0;
 	}
 
 	&__third {
@@ -71,14 +72,16 @@
 		@media screen and (max-width: $tablet) {
 			gap: 2.5rem;
 			justify-content: inherit;
-			gap: 40px;
+		}
+		@media screen and (max-width: $mobile) {
+			gap: 3rem;
 		}
 	}
 }
 
 .block__main-logo {
-	height: auto;
-	width: auto;
+	width: 100%;
+	max-width: 614px;
 }
 
 .info {
@@ -90,6 +93,7 @@
 
 	@media screen and (max-width: $tablet) {
 		gap: 2.5rem;
+		padding: 0.9325rem;
 	}
 
 	&__title {
@@ -121,6 +125,10 @@
 
 	@media screen and (max-width: $tablet) {
 		width: auto;
+	}
+
+	@media screen and (max-width: $mobile) {
+		max-width: 18rem;
 	}
 
 	&__links {
@@ -285,6 +293,9 @@
 	&__number {
 		@extend %title;
 		font-size: 3.75rem;
+		@media screen and (max-width: $mobile) {
+			font-size: 2rem;
+		}
 	}
 
 	&__text {

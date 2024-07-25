@@ -1,6 +1,11 @@
 .fifth-title {
 	@extend %block-title;
-	left: 1150px;
+	right: -2.5rem;
+	@media screen and (max-width: $tablet) {
+		transform: rotate(-90deg);
+		right: -17.5rem;
+		bottom: 39rem;
+	}
 }
 .images-info {
 	display: flex;
@@ -20,6 +25,7 @@
 		flex-direction: column;
 		flex-wrap: nowrap;
 		margin-left: -2.5rem;
+		margin-right: -2.5rem;
 		height: 100%;
 		max-height: 40vh;
 		justify-content: inherit;

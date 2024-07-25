@@ -20,6 +20,8 @@
 	@media screen and (max-width: $mobile) {
 		margin-bottom: 30px;
 		margin-top: 0;
+		max-height: inherit;
+		height: 100%;
 	}
 
 	&__header {
@@ -62,10 +64,12 @@
 		justify-content: space-between;
 		padding: 2.5rem;
 		border-radius: 10px 0 0 10px;
+		max-width: 26rem;
 		background-color: #1c1c1c;
 		@media screen and (max-width: $tablet) {
 			width: 100%;
 			border-radius: 0;
+			max-width: inherit;
 		}
 		@media screen and (max-width: $mobile) {
 			width: 100%;
@@ -85,9 +89,11 @@
 		height: 100%;
 		border-radius: 0 10px 10px 0;
 		overflow: hidden;
+		width: 52rem;
 
 		@media screen and (max-width: $tablet) {
 			border-radius: 10px 10px 0 0;
+			width: inherit;
 		}
 
 		&-frame {
