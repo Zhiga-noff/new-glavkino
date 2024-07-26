@@ -78,7 +78,10 @@
 	@media screen and (max-width: $mobile) {
 		font-size: 1.2rem;
 		gap: 2rem;
-		padding: 1rem 2rem;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
 	}
 }
 %fifth-image {
@@ -91,40 +94,6 @@
 	position: relative;
 	width: 100%;
 	height: auto;
-
-	// @media screen and (max-width: 1600px) {
-	// 	height: 40vh;
-	// 	width: 45vw;
-	// 	&:target {
-	// 		scale: 1.1;
-	// 		transition: all 0.5s;
-	// 		z-index: 50;
-	// 	}
-	// }
-
-	// @media screen and (max-height: 800px) {
-	// 	width: 100dvw;
-	// 	height: 20vh;
-	// 	&:target {
-	// 		scale: 1;
-	// 		transition: all 0.5s;
-	// 		z-index: 50;
-	// 	}
-	// 	&:hover {
-	// 		scale: 1;
-	// 		z-index: 50;
-	// 		transition: all 0.5s;
-	// 		.images-info__description {
-	// 			transition: all 0.5s;
-	// 			opacity: 1;
-	// 		}
-	// 		.images-overlay__item {
-	// 			transition: all 0.5s;
-	// 			opacity: 0;
-	// 			scale: 1.1;
-	// 		}
-	// 	}
-	// }
 
 	background-size: cover;
 	background-repeat: no-repeat;
