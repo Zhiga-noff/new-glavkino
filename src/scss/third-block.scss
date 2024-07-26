@@ -28,7 +28,7 @@
 			max-height: 12.2rem;
 			max-width: 30rem;
 			grid-template-rows: repeat(3, 4rem);
-			grid-template-columns: repeat(5, 6rem);
+			grid-template-columns: repeat(5, 17vw);
 		}
 	}
 	&__item {
@@ -122,7 +122,7 @@
 	@media screen and (max-width: $tablet) {
 		transform: rotate(-90deg);
 		right: -21.5rem;
-		bottom: 40rem;
+		top: 10rem;
 	}
 	@media screen and (max-width: $mobile) {
 		right: -11.5rem;

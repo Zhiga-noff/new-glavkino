@@ -23,6 +23,7 @@
 	opacity: 0.6;
 	@media screen and (max-width: $mobile) {
 		font-size: 4rem;
+		opacity: 0.2;
 	}
 }
 %description {
@@ -91,10 +92,6 @@
 	width: 100%;
 	height: auto;
 
-	@media screen and (max-width: $mobile) {
-		width: 100vw !important;
-		height: 100%;
-	}
 	// @media screen and (max-width: 1600px) {
 	// 	height: 40vh;
 	// 	width: 45vw;
@@ -148,6 +145,13 @@
 		}
 		@media screen and (max-height: 800px) {
 			height: 25vh;
+		}
+	}
+	@media screen and (max-width: $mobile) {
+		height: 100%;
+		&:hover {
+			scale: 1;
+			flex: 0 0 50%;
 		}
 	}
 }
