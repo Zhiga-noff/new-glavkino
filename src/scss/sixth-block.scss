@@ -22,6 +22,7 @@
 		margin-top: 0;
 		max-height: inherit;
 		height: 100%;
+		width: 100%;
 	}
 
 	&__header {
@@ -112,6 +113,9 @@
 		font-size: 1.5625rem;
 		color: white;
 		margin-bottom: 0.625rem;
+		@media screen and (max-width: $mobile) {
+			font-size: 1.6rem;
+		}
 	}
 
 	&__entry {
