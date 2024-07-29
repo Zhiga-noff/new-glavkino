@@ -17,13 +17,16 @@
 	height: 37.5rem;
 
 	@media screen and (max-width: $tablet) {
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
 		height: 100%;
 		margin-top: 40px;
 		gap: 1.25rem;
 	}
 
 	@media screen and (max-width: $mobile) {
+		display: flex;
 		margin-top: 50px;
 		gap: 0;
 		flex-direction: column;

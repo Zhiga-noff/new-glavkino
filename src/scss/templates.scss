@@ -18,12 +18,14 @@
 }
 %block-title {
 	@extend %title;
-	font-size: 7.5rem;
+	font-size: 8.75rem;
 	position: absolute;
-	opacity: 0.6;
+	opacity: 0.4;
+	@media screen and (max-width: $tablet) {
+		opacity: 0.2;
+	}
 	@media screen and (max-width: $mobile) {
 		font-size: 4rem;
-		opacity: 0.2;
 	}
 }
 %description {
@@ -53,9 +55,12 @@
 %button {
 	color: white;
 	font-family: 'RFDewiExtended';
-	font-size: 1rem;
+	font-size: 1.25rem;
 	background-color: #e2241d;
 	display: flex;
+	@media screen and (max-width: $mobile) {
+		font-size: 1.2rem;
+	}
 	justify-content: space-between;
 
 	width: min-content;
@@ -70,6 +75,12 @@
 	padding-top: 0.9rem;
 	padding-bottom: 0.9rem;
 	padding-right: 1.25rem;
+	div {
+		height: 1.2rem;
+		img {
+			height: 100%;
+		}
+	}
 	&:hover {
 		scale: 1.05;
 		background-color: #d34843;

@@ -34,7 +34,7 @@
 		}
 		.numbered-item {
 			&__number {
-				width: 5.3125rem;
+				flex: 0 0 6rem;
 				text-align: center;
 			}
 
@@ -71,6 +71,7 @@
 .fourth-title {
 	@extend %block-title;
 	right: -2.5rem;
+	top: 2.5rem;
 	@media screen and (max-width: $tablet) {
 		transform: rotate(-90deg);
 		right: -16.5rem;

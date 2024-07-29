@@ -95,6 +95,11 @@
 	@media screen and (max-width: $tablet) {
 		gap: 2.5rem;
 		padding: 0.9325rem;
+		padding-bottom: 0;
+		margin-bottom: 2.5rem;
+	}
+	@media screen and (max-width: $mobile) {
+		padding-bottom: 0;
 	}
 
 	&__title {
@@ -108,9 +113,15 @@
 	&__text {
 		@extend %description;
 		display: flex;
-		gap: 0.625rem;
+		gap: 2.8125rem;
 		flex-direction: column;
 		max-width: 56.25rem;
+		@media screen and (max-width: $tablet) {
+			gap: 0.625;
+		}
+		@media screen and (max-width: $mobile) {
+			gap: 1.5rem;
+		}
 	}
 }
 
@@ -167,6 +178,8 @@
 .services {
 	width: 100%;
 	height: 100vh;
+	display: flex;
+	justify-content: end;
 
 	@media screen and (max-width: $tablet) {
 	}
@@ -182,6 +195,11 @@
 		grid-template-columns: 57% 43%;
 		grid-template-rows: 41% 59%;
 		height: 100%;
+		max-width: 1028px;
+		@media screen and (max-width: $tablet) {
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+		}
 		@media screen and (max-width: $mobile) {
 			grid-template-columns: 1fr;
 			grid-template-rows: auto;
@@ -262,11 +280,27 @@
 	&__overlay-1 {
 		@extend %overlay;
 		background-color: rgba(8, 36, 63, 0.6);
+
+		@media screen and (max-width: $tablet) {
+			.services__title {
+				margin-bottom: 2rem;
+			}
+		}
+
+		@media screen and (max-width: $mobile) {
+			.services__title {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	&__overlay-2 {
 		@extend %overlay;
 		background-color: rgba(8, 36, 63, 0.5);
+		@media screen and (max-width: $mobile) {
+			display: flex;
+			justify-content: center;
+		}
 	}
 
 	&__overlay-3 {
@@ -279,8 +313,11 @@
 		flex-direction: column;
 		gap: 3.125rem;
 
-		@media screen and (max-height: $tablet) {
+		@media screen and (max-width: $tablet) {
 			gap: 0.625rem;
+		}
+		@media screen and (max-width: $mobile) {
+			gap: 1rem;
 		}
 	}
 
