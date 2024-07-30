@@ -21,7 +21,7 @@
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(2, 1fr);
 		height: 100%;
-		margin-top: 40px;
+
 		gap: 1.25rem;
 	}
 
@@ -130,5 +130,8 @@
 		@extend %description;
 		color: white;
 		opacity: 0;
+		@media screen and (max-width: $mobile) {
+			display: none;
+		}
 	}
 }

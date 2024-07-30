@@ -50,6 +50,7 @@
 	}
 	@media screen and (max-width: $mobile) {
 		padding: 1rem;
+		justify-content: center;
 	}
 }
 %button {
@@ -122,9 +123,6 @@
 			transition: all 0.5s;
 			opacity: 0;
 			scale: 1.1;
-		}
-		@media screen and (max-height: 800px) {
-			height: 25vh;
 		}
 	}
 	@media screen and (max-width: $mobile) {

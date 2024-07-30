@@ -27,15 +27,30 @@
 		display: flex;
 
 		flex-direction: row;
-		gap: 11.25rem;
+		justify-content: space-between;
 		@media screen and (max-width: $tablet) {
+			justify-content: inherit;
 			flex-direction: column;
-			gap: 1.25rem;
+			gap: 0.625rem;
+		}
+		@media screen and (max-width: $mobile) {
+			gap: 1rem;
 		}
 		.numbered-item {
 			&__number {
 				flex: 0 0 6rem;
 				text-align: center;
+
+				@media screen and (max-width: $tablet) {
+					flex: 0 0 4.7rem;
+				}
+
+				@media screen and (max-width: $mobile) {
+					flex: 0 0 3.3rem;
+				}
+			}
+			@media screen and (max-width: $mobile) {
+				gap: 1rem;
 			}
 
 			&__text {
@@ -52,7 +67,6 @@
 	position: relative;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 
 	&__overlay {
 		position: absolute;

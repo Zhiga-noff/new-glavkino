@@ -115,6 +115,15 @@
 	height: calc(100vh - (152px + 60px + 85px));
 	scrollbar-gutter: stable;
 	flex-shrink: 0;
+
+	&::-webkit-scrollbar {
+		width: none;
+	}
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
 	&__item {
 		&-1 {
 			@extend %item;
