@@ -364,6 +364,8 @@
 }
 
 .burger {
+	@media screen and (min-width: $mobile) {
+	}
 	position: fixed;
 	transform: translateX(100%);
 	top: 0;

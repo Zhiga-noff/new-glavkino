@@ -149,7 +149,8 @@
 		background: #e21d1d;
 		padding: 1.25rem;
 		align-self: self-end;
-		transform: translateY(150%);
+		transform: translateY(150%) translateX(2%);
+
 		@media screen and (max-width: $tablet) {
 			transform: inherit;
 			align-self: flex-start;
@@ -248,13 +249,13 @@
 	}
 }
 .item-active {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	background-color: rgba($color: #1c1c1c, $alpha: 0.4);
 	@media screen and (max-width: $tablet) {
 		height: 460px;
 		max-height: 460px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background-color: rgba($color: #1c1c1c, $alpha: 0.4);
 	}
 
 	@media screen and (max-width: $mobile) {

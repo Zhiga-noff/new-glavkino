@@ -19,7 +19,7 @@ const initialChoosed = () => {
 initialChoosed();
 
 buttons.forEach((button) => {
-	if (window.innerWidth > 992) {
+	if (document.documentElement.clientWidth > 992) {
 		button.addEventListener('click', () => {
 			choosedContainer.innerHTML = `
         <h3 class="main__choosed-header">Натурная площадка ${button.id.slice(1)}</h3>
@@ -56,11 +56,15 @@ const burger = document.querySelector('.burger');
 
 menu.forEach((item) => {
 	item.addEventListener('click', () => {
-		burger.classList.add('burger-active');
+		if (document.documentElement.clientWidth > 992) {
+			burger.classList.add('burger-active');
+		}
 	});
 });
 menuClose.forEach((item) => {
 	item.addEventListener('click', () => {
-		burger.classList.remove('burger-active');
+		if (document.documentElement.clientWidth > 992) {
+			burger.classList.remove('burger-active');
+		}
 	});
 });
