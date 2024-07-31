@@ -10,6 +10,9 @@
 		gap: 2.5rem;
 		position: relative;
 		z-index: 1;
+		@media screen and (max-width: $tablet) {
+			height: 100%;
+		}
 	}
 	&__choosed {
 		position: relative;
