@@ -19,22 +19,15 @@ function isWebp() {
 
 isWebp();
 
-const menu = document.querySelector('.open');
+const menu = document.querySelectorAll('.open');
+const menuClose = document.querySelector('.close');
 const burger = document.querySelector('.burger');
-const isOpened = false;
 
-menu.addEventListener('click', () => {
-	if (!isOpened) {
-		burger.style.display = 'flex';
-		burger.style.position = 'absolute';
-		burger.style.top = '0';
-		burger.style.overflow = 'hidden';
-		isOpened = true;
-	} else {
-		burger.style.display = 'none';
-		burger.style.position = 'absolute';
-		burger.style.top = '0';
-		burger.style.overflow = 'inherit';
-		isOpened = false;
-	}
+menu.forEach((item) => {
+	item.addEventListener('click', () => {
+		burger.classList.add('burger-active');
+	});
+});
+menuClose.addEventListener('click', () => {
+	burger.classList.remove('burger-active');
 });

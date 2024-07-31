@@ -4,6 +4,13 @@
 	flex-direction: column;
 	gap: 5.3125rem;
 
+	@media screen and (max-width: $tablet) {
+		gap: inherit;
+		justify-content: space-between;
+
+		overflow: hidden !important;
+	}
+
 	&__choices {
 		display: flex;
 		flex-direction: row;
@@ -12,6 +19,9 @@
 		z-index: 1;
 		@media screen and (max-width: $tablet) {
 			height: 100%;
+		}
+		@media screen and (max-width: $mobile) {
+			height: calc(100vh - 70px);
 		}
 	}
 	&__choosed {
@@ -61,11 +71,20 @@
 		gap: 1.25rem;
 		position: relative;
 		z-index: 1;
+		@media screen and (max-width: $mobile) {
+			width: 100%;
+		}
 	}
 
 	&__logo {
 		height: 4.5rem;
 		overflow: hidden;
+		@media screen and (max-width: $tablet) {
+			height: fit-content;
+		}
+		@media screen and (max-width: $mobile) {
+			align-items: center;
+		}
 	}
 
 	&__back-link {
@@ -77,6 +96,9 @@
 		gap: 1.875rem;
 		padding: 1.25rem 1.25rem;
 		transition: all 0.5s;
+		@media screen and (max-width: $tablet) {
+			display: none;
+		}
 
 		& p {
 			@extend %title;
@@ -99,7 +121,8 @@
 
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
+	align-items: center;
 	font-size: 2.5rem;
 	border-radius: 10px;
 	padding-left: 3.125rem;
@@ -107,11 +130,23 @@
 	overflow: hidden;
 	flex-shrink: 0;
 
+	&-active {
+		@media screen and (max-width: $tablet) {
+			
+		}
+
+		@media screen and (max-width: $mobile) {
+			
+		}
+	}
+
 	& button {
 		background: #e21d1d;
 		padding: 1.25rem;
 		align-self: self-end;
+		transform: translateY(150%);
 		@media screen and (max-width: $tablet) {
+			transform: inherit;
 			align-self: flex-start;
 
 			border-radius: 10px;
@@ -145,6 +180,9 @@
 	flex-shrink: 0;
 	@media screen and (max-width: $tablet) {
 		width: 100%;
+	}
+	@media screen and (max-width: $mobile) {
+		height: 100%;
 	}
 
 	&::-webkit-scrollbar {
@@ -192,4 +230,11 @@
 			background-color: #e21da7;
 		}
 	}
+}
+
+body,
+html {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
 }

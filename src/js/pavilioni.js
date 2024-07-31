@@ -60,3 +60,15 @@ buttons.forEach((button) => {
 document.querySelector('.headerL__back-link').addEventListener('click', () => {
 	window.history.back();
 });
+
+const menu = document.querySelector('.open');
+const menuClose = document.querySelector('.close');
+const burger = document.querySelector('.burger');
+const isOpened = false;
+
+menu.addEventListener('click', () => {
+	burger.classList.add('burger-active');
+});
+menuClose.addEventListener('click', () => {
+	burger.classList.remove('burger-active');
+});
