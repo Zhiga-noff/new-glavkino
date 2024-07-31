@@ -56,15 +56,11 @@ const burger = document.querySelector('.burger');
 
 menu.forEach((item) => {
 	item.addEventListener('click', () => {
-		if (document.documentElement.clientWidth > 992) {
-			burger.classList.add('burger-active');
-		}
+		burger.classList.add('burger-active');
 	});
 });
 menuClose.forEach((item) => {
 	item.addEventListener('click', () => {
-		if (document.documentElement.clientWidth > 992) {
-			burger.classList.remove('burger-active');
-		}
+		burger.classList.remove('burger-active');
 	});
 });
