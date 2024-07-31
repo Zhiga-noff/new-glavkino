@@ -20,7 +20,7 @@ function isWebp() {
 isWebp();
 
 const menu = document.querySelectorAll('.open');
-const menuClose = document.querySelector('.close');
+const menuClose = document.querySelectorAll('.close');
 const burger = document.querySelector('.burger');
 
 menu.forEach((item) => {
@@ -28,6 +28,8 @@ menu.forEach((item) => {
 		burger.classList.add('burger-active');
 	});
 });
-menuClose.addEventListener('click', () => {
-	burger.classList.remove('burger-active');
+menuClose.forEach((item) => {
+	item.addEventListener('click', () => {
+		burger.classList.remove('burger-active');
+	});
 });

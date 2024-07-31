@@ -30,7 +30,7 @@ const initialChoosed = () => {
 initialChoosed();
 
 buttons.forEach((button) => {
-	if (window.innerWidth > 992) {
+	if (document.documentElement.clientWidth > 992) {
 		button.addEventListener('click', () => {
 			choosedContainer.innerHTML = `
         <h3 class="main__choosed-header">Павильон ${button.id.slice(1)}</h3>
@@ -41,18 +41,15 @@ buttons.forEach((button) => {
 			choosedContainer.style.backgroundColor = 'rgba(28, 28, 28, 0.6)';
 		});
 	} else {
-		button.style.maxHeight = '8rem';
 		//accordion
 		button.addEventListener('click', () => {
 			//check if containers height is already max height
-			if (button.style.maxHeight != '8rem') {
-				button.style.maxHeight = '8rem';
-				button.style.height = '100%';
+			if (button.classList.contains(`item-active`)) {
+				button.classList.remove(`item-active`);
 				texts[button.id.slice(1) - 1].style.display = 'none';
 			} else {
+				button.classList.add(`item-active`);
 				texts[button.id.slice(1) - 1].style.display = 'block';
-				button.style.height = 'auto';
-				button.style.maxHeight = '28.994375rem';
 			}
 		});
 	}
@@ -61,14 +58,17 @@ document.querySelector('.headerL__back-link').addEventListener('click', () => {
 	window.history.back();
 });
 
-const menu = document.querySelector('.open');
-const menuClose = document.querySelector('.close');
+const menu = document.querySelectorAll('.open');
+const menuClose = document.querySelectorAll('.close');
 const burger = document.querySelector('.burger');
-const isOpened = false;
 
-menu.addEventListener('click', () => {
-	burger.classList.add('burger-active');
+menu.forEach((item) => {
+	item.addEventListener('click', () => {
+		burger.classList.add('burger-active');
+	});
 });
-menuClose.addEventListener('click', () => {
-	burger.classList.remove('burger-active');
+menuClose.forEach((item) => {
+	item.addEventListener('click', () => {
+		burger.classList.remove('burger-active');
+	});
 });
