@@ -9,6 +9,9 @@
 	overflow-x: hidden;
 	max-height: 100vh;
 	max-width: 100dvw;
+	@media screen and (max-width: $tablet) {
+		padding: 1.25rem;
+	}
 	@media screen and (max-width: $mobile) {
 		padding: 1rem;
 	}

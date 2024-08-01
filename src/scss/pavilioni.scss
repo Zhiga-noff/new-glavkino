@@ -150,6 +150,7 @@
 		padding: 1.25rem;
 		align-self: self-end;
 		transform: translateY(150%) translateX(2%);
+		transition: all 0.5s;
 
 		@media screen and (max-width: $tablet) {
 			transform: inherit;
@@ -249,6 +250,10 @@
 	}
 }
 .item-active {
+	& button {
+		transform: rotate(90deg);
+		transition: all 0.5s;
+	}
 	@media screen and (max-width: $tablet) {
 		height: 460px;
 		max-height: 460px;
