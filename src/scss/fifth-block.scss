@@ -41,7 +41,7 @@
 	&__image {
 		&-1 {
 			@extend %fifth-image;
-			background-image: url('/img/fifth-block/1.png');
+			background-image: url('../img/fifth-block/1.png');
 			background-color: rgba($color: #000000, $alpha: 0.6);
 			background-blend-mode: multiply;
 			filter: grayscale(100%);
@@ -55,7 +55,7 @@
 		}
 		&-2 {
 			@extend %fifth-image;
-			background-image: url('/img/fifth-block/2.png');
+			background-image: url('../img/fifth-block/2.png');
 			background-color: rgba($color: #000000, $alpha: 0.6);
 			background-blend-mode: multiply;
 			filter: grayscale(100%);
@@ -69,7 +69,7 @@
 		}
 		&-3 {
 			@extend %fifth-image;
-			background-image: url('/img/fifth-block/3.png');
+			background-image: url('../img/fifth-block/3.png');
 			background-color: rgba($color: #000000, $alpha: 0.6);
 			background-blend-mode: multiply;
 			filter: grayscale(100%);
@@ -83,7 +83,7 @@
 		}
 		&-4 {
 			@extend %fifth-image;
-			background-image: url('/img/fifth-block/4.png');
+			background-image: url('../img/fifth-block/4.png');
 			background-color: rgba($color: #000000, $alpha: 0.6);
 			background-blend-mode: multiply;
 			filter: grayscale(100%);

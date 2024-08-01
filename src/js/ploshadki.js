@@ -12,7 +12,7 @@ const initialChoosed = () => {
         <h3 class="main__choosed-header">Натурная площадка 1</h3>
         <p class="main__choosed-text">${texts[0].textContent}</p>
         `;
-	choosedContainer.style.background = `url('/img/ploshadki/1.png') center center / cover no-repeat`;
+	choosedContainer.style.background = `url('img/ploshadki/1.png') center center / cover no-repeat`;
 	choosedContainer.style.backgroundBlendMode = 'multiply';
 	choosedContainer.style.backgroundColor = 'rgba(28, 28, 28, 0.6)';
 };
@@ -25,7 +25,7 @@ buttons.forEach((button) => {
         <h3 class="main__choosed-header">Натурная площадка ${button.id.slice(1)}</h3>
         <p class="main__choosed-text">${texts[button.id.slice(1) - 1].textContent}</p>
         `;
-			choosedContainer.style.background = `url('/img/ploshadki/${button.id.slice(1)}.png') center center / cover no-repeat`;
+			choosedContainer.style.background = `url('img/ploshadki/${button.id.slice(1)}.png') center center / cover no-repeat`;
 			//затемнить фон
 			choosedContainer.style.backgroundBlendMode = 'multiply';
 			//прозрачность фона
@@ -63,4 +63,10 @@ menuClose.forEach((item) => {
 	item.addEventListener('click', () => {
 		burger.classList.remove('burger-active');
 	});
+});
+
+const links = document.querySelectorAll('.header__link');
+
+links.forEach((link) => {
+	link.setAttribute('href', 'index.html' + link.getAttribute('href'));
 });

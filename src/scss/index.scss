@@ -9,7 +9,7 @@
 	&__first {
 		@extend %block;
 		scroll-snap-align: start;
-		background: url('/img/background.png') center center / cover no-repeat;
+		background: url('../img/background.png') center center / cover no-repeat;
 		background-blend-mode: multiply;
 		background-color: rgba(28, 28, 28, 0.6);
 		display: flex;
@@ -29,7 +29,7 @@
 		justify-content: space-between;
 	}
 	&__sixth {
-		background: url('/img/background.png') center center / cover no-repeat;
+		background: url('../img/background.png') center center / cover no-repeat;
 		background-blend-mode: multiply;
 		background-color: rgba(28, 28, 28, 0.6);
 		display: flex;
@@ -236,7 +236,7 @@
 			grid-row-end: 3;
 			position: relative;
 
-			background: url('/img/second-block/grid-1.png') center center / cover no-repeat;
+			background: url('../img/second-block/grid-1.png') center center / cover no-repeat;
 			background: none;
 
 			@media screen and (max-width: $mobile) {
@@ -246,7 +246,7 @@
 		}
 
 		&:nth-child(2) {
-			background: url('/img/second-block/grid-2.png') center center / cover no-repeat;
+			background: url('../img/second-block/grid-2.png') center center / cover no-repeat;
 			background: none;
 			position: relative;
 
@@ -388,6 +388,10 @@
 		align-items: center;
 		gap: 25px;
 		font-size: 16px;
+	}
+
+	&__contacts {
+		margin-top: 105%;
 	}
 }
 .burger-active {

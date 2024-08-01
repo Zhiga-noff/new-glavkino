@@ -23,7 +23,7 @@ const initialChoosed = () => {
         <h3 class="main__choosed-header">Павильон 1</h3>
         <p class="main__choosed-text">${texts[0].textContent}</p>
         `;
-	choosedContainer.style.background = `url('/img/pavilioni/1.png') center center / cover no-repeat`;
+	choosedContainer.style.background = `url('img/pavilioni/1.png') center center / cover no-repeat`;
 	choosedContainer.style.backgroundBlendMode = 'multiply';
 	choosedContainer.style.backgroundColor = 'rgba(28, 28, 28, 0.6)';
 };
@@ -36,7 +36,7 @@ buttons.forEach((button) => {
         <h3 class="main__choosed-header">Павильон ${button.id.slice(1)}</h3>
         <p class="main__choosed-text">${texts[button.id.slice(1) - 1].textContent}</p>
         `;
-			choosedContainer.style.background = `url('/img/pavilioni/${button.id.slice(1)}.png') center center / cover no-repeat`;
+			choosedContainer.style.background = `url('img/pavilioni/${button.id.slice(1)}.png') center center / cover no-repeat`;
 			choosedContainer.style.backgroundBlendMode = 'multiply';
 			choosedContainer.style.backgroundColor = 'rgba(28, 28, 28, 0.6)';
 		});
@@ -71,4 +71,10 @@ menuClose.forEach((item) => {
 	item.addEventListener('click', () => {
 		burger.classList.remove('burger-active');
 	});
+});
+
+const links = document.querySelectorAll('.header__link');
+
+links.forEach((link) => {
+	link.setAttribute('href', 'index.html' + link.getAttribute('href'));
 });

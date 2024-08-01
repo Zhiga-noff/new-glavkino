@@ -25,7 +25,7 @@
 		<div class="burger">
 			<div class="header">
 				<a href="/#choose" class="header__logo">
-					<img width="auto" src="/img/logo-red.svg" alt="Логотип киностудии" />
+					<img width="auto" src="img/logo-red.svg" alt="Логотип киностудии" />
 				</a>
 				<div class="header__links">
 					<a href="#paviloni" class="header__link">Павильоны</a>
@@ -34,7 +34,7 @@
 					<a href="#contacts" class="header__link">Контакты</a>
 				</div>
 				<div class="close">
-					<img src="/img/burger(1).svg" height="100%" width="100%" alt="" />
+					<img src="img/burger(1).svg" height="100%" width="100%" alt="" />
 				</div>
 			</div>
 
@@ -46,15 +46,31 @@
 					<li class="burger__item close"><a href="#contacts">Контакты</a></li>
 				</ul>
 			</div>
+			<div class="burger__contacts">
+				<div class="contact__entry">
+					<div class="contact__icon"><img src="img/sixth-block/call.svg" alt="" /></div>
+					<a class="contact__link" href="tel:+7906746618">+7 (906) 746-61-18</a>
+				</div>
+				<div class="contact__entry">
+					<div class="contact__icon">
+						<img src="img/sixth-block/sms-tracking.svg" alt="" />
+					</div>
+					<a class="contact__link" href="mailto:vmazurov@glavkino.ru"
+						>vmazurov@glavkino.ru</a
+					>
+				</div>
+			</div>
 		</div>
 		<div class="block">
 			<header class="block__first section">
 				<div class="block__main-logo">
-					<img width="100%" src="/img/logo-white.svg" alt="логотип киностудии" />
+					<img width="100%" src="img/logo-white.svg" alt="логотип киностудии" />
 				</div>
 			</header>
 
-			<div class="block__second section" id="choose">@@include('html/second-block.html',{})</div>
+			<div class="block__second section" id="choose">
+				@@include('html/second-block.html',{})
+			</div>
 			<div class="block__third section" id="paviloni">
 				@@include('html/third-block.html',{})
 			</div>
