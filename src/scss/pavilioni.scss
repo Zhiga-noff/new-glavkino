@@ -162,6 +162,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			transition: all 0.5s;
 		}
 	}
 	height: 100%;
@@ -261,6 +262,10 @@
 		flex-direction: column;
 		justify-content: space-between;
 		background-color: rgba($color: #1c1c1c, $alpha: 0.4);
+		& button {
+			transform: rotate(90deg);
+			transition: all 0.5s;
+		}
 	}
 
 	@media screen and (max-width: $mobile) {
