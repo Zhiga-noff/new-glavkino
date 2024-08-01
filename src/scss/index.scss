@@ -73,6 +73,7 @@
 		@media screen and (max-width: $tablet) {
 			gap: 2.5rem;
 			justify-content: inherit;
+			padding-bottom: 2.5rem;
 		}
 		@media screen and (max-width: $mobile) {
 			gap: 3rem;
