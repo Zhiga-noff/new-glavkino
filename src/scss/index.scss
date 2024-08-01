@@ -343,9 +343,11 @@
 	}
 }
 
+
 .numbered-item {
 	display: flex;
 	gap: 3.125rem;
+	
 
 	&__number {
 		@extend %title;
