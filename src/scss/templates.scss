@@ -1,5 +1,5 @@
 %block {
-	height: 100vh;
+	height: 100dvh;
 	width: 100dvw;
 	overflow: hidden;
 	scroll-snap-align: start;
@@ -7,7 +7,7 @@
 	padding: 2.5rem;
 	position: relative;
 	overflow-x: hidden;
-	max-height: 100vh;
+	max-height: 100dvh;
 	max-width: 100dvw;
 	@media screen and (max-width: $tablet) {
 		padding: 1.25rem;
