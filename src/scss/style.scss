@@ -22,6 +22,8 @@ html {
 	scroll-behavior: smooth !important;
 	scrollbar-color: #e2241d #1c1c1c;
 
+	background-color: #1c1c1c;
+
 	font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (1920 - 320)));
 	@media screen and (max-width: $tablet) {
 		font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (768 - 320)));

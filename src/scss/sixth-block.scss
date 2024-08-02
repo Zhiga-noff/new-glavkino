@@ -13,7 +13,7 @@
 	@media screen and (max-width: $tablet) {
 		flex-direction: column-reverse;
 		width: calc(100vw - 5rem);
-		height: calc(100dvh - 18.75rem);
+		height: calc(100vh - 18.75rem);
 		border-radius: 10px;
 		overflow: hidden;
 	}
@@ -23,6 +23,12 @@
 		max-height: inherit;
 		height: 100%;
 		width: 100%;
+	}
+
+	&_safari {
+		@media screen and (max-width: $mobile) {
+			margin-bottom: 80px;
+		}
 	}
 
 	&__header {
@@ -75,7 +81,6 @@
 		@media screen and (max-width: $mobile) {
 			width: 100%;
 			border-radius: 0;
-			height: 65vh;
 			padding: 0.625rem;
 			padding-left: 1.25rem;
 		}
