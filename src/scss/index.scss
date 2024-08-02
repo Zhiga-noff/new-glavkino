@@ -118,6 +118,13 @@
 		gap: 2.8125rem;
 		flex-direction: column;
 		max-width: 56.25rem;
+		transform: translateX(-100%);
+		opacity: 0;
+		transition: all 1s;
+		&.anim {
+			transform: translateX(0);
+			opacity: 1;
+		}
 		@media screen and (max-width: $tablet) {
 			gap: 0.625;
 		}
@@ -236,6 +243,13 @@
 			grid-row-start: 1;
 			grid-row-end: 3;
 			position: relative;
+			transform: translateY(30%);
+			opacity: 0;
+			transition: all 1s;
+			&.anim {
+				transform: translateY(0);
+				opacity: 1;
+			}
 
 			background: url('../img/second-block/grid-1.png') center center / cover no-repeat;
 			background: none;
@@ -243,6 +257,13 @@
 			@media screen and (max-width: $mobile) {
 				grid-row-start: 1;
 				grid-row-end: 2;
+				transform: translateX(100%);
+				opacity: 0;
+				transition: all 1s;
+				&.anim {
+					transform: translateX(0);
+					opacity: 1;
+				}
 			}
 		}
 
@@ -250,6 +271,13 @@
 			background: url('../img/second-block/grid-2.png') center center / cover no-repeat;
 			background: none;
 			position: relative;
+			transform: translateX(100%);
+			opacity: 0;
+			transition: all 1s;
+			&.anim {
+				transform: translateX(0);
+				opacity: 1;
+			}
 
 			@media screen and (max-width: $mobile) {
 				.services__wrapper {
@@ -262,6 +290,13 @@
 		&:nth-child(3) {
 			background: none;
 			position: relative;
+			transform: translateX(100%);
+			opacity: 0;
+			transition: all 1s;
+			&.anim {
+				transform: translateX(0);
+				opacity: 1;
+			}
 		}
 	}
 
@@ -343,11 +378,9 @@
 	}
 }
 
-
 .numbered-item {
 	display: flex;
 	gap: 3.125rem;
-	
 
 	&__number {
 		@extend %title;
