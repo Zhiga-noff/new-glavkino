@@ -170,6 +170,9 @@
 		@media screen and (max-width: $mobile) {
 			max-width: 18rem;
 		}
+		&:hover {
+			scale: inherit !important;
+		}
 		img {
 			width: 100%;
 			height: auto;
