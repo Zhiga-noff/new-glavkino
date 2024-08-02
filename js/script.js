@@ -19,6 +19,28 @@ function isWebp() {
 
 isWebp();
 
+const ua = navigator.userAgent.toLowerCase();
+
+const browser = {
+	chrome: /chrome|chromium/.test(ua) && !/edg/.test(ua),
+	edge: /edg/.test(ua),
+	firefox: /firefox/.test(ua),
+	safari: /^((?!chrome|android).)*safari/.test(ua),
+	ie: /msie|trident/.test(ua),
+};
+
+console.log(browser);
+
+if (browser.safari) {
+	document.querySelector('.contact-info').classList.add('contact-info_safari');
+	document.querySelector('.services__grid').classList.add('services__grid_safari');
+	document.querySelectorAll('.services__grid-item').forEach((item) => {
+		item.classList.add('services__grid-item_safari');
+	});
+	document.querySelector('.burger').classList.add('burger_safari');
+	
+}
+
 const menu = document.querySelectorAll('.open');
 const menuClose = document.querySelectorAll('.close');
 const burger = document.querySelector('.burger');
