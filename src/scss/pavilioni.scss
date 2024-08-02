@@ -17,9 +17,10 @@
 		gap: 2.5rem;
 		position: relative;
 		z-index: 1;
-		overflow: scroll;
+
 		@media screen and (max-width: $tablet) {
 			height: 100%;
+			overflow: scroll;
 		}
 		@media screen and (max-width: $mobile) {
 			height: calc(100vh - 70px);
@@ -145,7 +146,7 @@
 	color: white;
 	overflow: hidden;
 	flex-shrink: 0;
-	transform: translateX(30%);
+	transform: translateX(-30%);
 	opacity: 0;
 	transition: all 1s;
 	&.anim {
