@@ -17,6 +17,7 @@
 		gap: 2.5rem;
 		position: relative;
 		z-index: 1;
+		overflow: scroll;
 		@media screen and (max-width: $tablet) {
 			height: 100%;
 		}
@@ -144,6 +145,13 @@
 	color: white;
 	overflow: hidden;
 	flex-shrink: 0;
+	transform: translateX(30%);
+	opacity: 0;
+	transition: all 1s;
+	&.anim {
+		transform: translateY(0);
+		opacity: 1;
+	}
 
 	& button {
 		background: #e21d1d;
@@ -256,6 +264,14 @@
 		&-6 {
 			@extend %item;
 			background-color: #e21da7;
+		}
+		&-7 {
+			@extend %item;
+			background-color: #e21d1d;
+		}
+		&-8 {
+			@extend %item;
+			background-color: #1de21d;
 		}
 	}
 }

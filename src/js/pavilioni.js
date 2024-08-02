@@ -6,8 +6,10 @@ const button3 = document.getElementById('b3');
 const button4 = document.getElementById('b4');
 const button5 = document.getElementById('b5');
 const button6 = document.getElementById('b6');
+const button7 = document.getElementById('b7');
+const button8 = document.getElementById('b8');
 
-const buttons = [button1, button2, button3, button4, button5, button6];
+const buttons = [button1, button2, button3, button4, button5, button6, button7, button8];
 
 const texts = [
 	document.getElementById('t1'),
@@ -16,6 +18,8 @@ const texts = [
 	document.getElementById('t4'),
 	document.getElementById('t5'),
 	document.getElementById('t6'),
+	document.getElementById('t7'),
+	document.getElementById('t8'),
 ];
 
 const initialChoosed = () => {
@@ -30,20 +34,26 @@ const initialChoosed = () => {
 initialChoosed();
 
 buttons.forEach((button) => {
-	if (document.documentElement.clientWidth > 992) {
+	const pavilionNumber = button.id.slice(1);
+	const pavilionImagePath = `img/pavilioni/${pavilionNumber}.png`;
+	const accordionActiveClass = 'item-active';
+
+	button.style.background = `url(${pavilionImagePath}) center center / cover no-repeat`;
+	button.style.backgroundBlendMode = 'multiply';
+	button.style.backgroundColor = 'rgba(28, 28, 28, 0.6)';
+
+	if (window.innerWidth > 992) {
 		button.addEventListener('click', () => {
 			choosedContainer.innerHTML = `
-        <h3 class="main__choosed-header">Павильон ${button.id.slice(1)}</h3>
-        <p class="main__choosed-text">${texts[button.id.slice(1) - 1].textContent}</p>
-        `;
-			choosedContainer.style.background = `url('img/pavilioni/${button.id.slice(1)}.png') center center / cover no-repeat`;
+				<h3 class="main__choosed-header">Павильон ${pavilionNumber}</h3>
+				<p class="main__choosed-text">${texts[pavilionNumber - 1].textContent}</p>
+			`;
+			choosedContainer.style.background = `url(${pavilionImagePath}) center center / cover no-repeat`;
 			choosedContainer.style.backgroundBlendMode = 'multiply';
-			choosedContainer.style.backgroundColor = 'rgba(28, 28, 28, 0.6)';
+			choosedContainer.style.backgroundColor = 'rgba(28, 28, 28, 0.4)';
 		});
 	} else {
-		//accordion
 		button.addEventListener('click', () => {
-			//check if containers height is already max height
 			if (button.classList.contains(`item-active`)) {
 				button.classList.remove(`item-active`);
 				texts[button.id.slice(1) - 1].style.display = 'none';
@@ -54,6 +64,33 @@ buttons.forEach((button) => {
 		});
 	}
 });
+//  buttons.forEach((button) => {
+//  	button.style.backgroundImage = `url('img/pavilioni/${button.id.slice(1)}.png') center center / cover no-repeat`;
+//  	button.style.backgroundBlendMode = 'multiply';
+//  	button.style.backgroundColor = 'rgba(28, 28, 28, 0.6)';
+//  	if (document.documentElement.clientWidth > 992) {
+//  		button.addEventListener('click', () => {
+//  			choosedContainer.innerHTML = `
+//          <h3 class="main__choosed-header">Павильон ${button.id.slice(1)}</h3>
+//          <p class="main__choosed-text">${texts[button.id.slice(1) - 1].textContent}</p>
+//          `;
+//  			choosedContainer.style.background = `url('img/pavilioni/${button.id.slice(1)}.png') center center / cover no-repeat`;
+//  			choosedContainer.style.backgroundBlendMode = 'multiply';
+//  			choosedContainer.style.backgroundColor = 'rgba(28, 28, 28, 0.6)';
+//  		});
+//  	} else {
+//  		accordion
+//  		button.addEventListener('click', () => {
+//  			if (button.classList.contains(`item-active`)) {
+//  				button.classList.remove(`item-active`);
+//  				texts[button.id.slice(1) - 1].style.display = 'none';
+//  			} else {
+//  				button.classList.add(`item-active`);
+//  				texts[button.id.slice(1) - 1].style.display = 'block';
+//  			}
+//  		});
+//  	}
+//  });
 document.querySelector('.headerL__back-link').addEventListener('click', () => {
 	window.history.back();
 });
@@ -78,3 +115,43 @@ const links = document.querySelectorAll('.header__link');
 links.forEach((link) => {
 	link.setAttribute('href', 'index.html' + link.getAttribute('href'));
 });
+
+// Данная функция позволяет создавать анимацю появления объектов при скролле сайта
+// Проверяем наличие класса у объекта который будем анимировать
+let animItems = document.querySelectorAll('.anim-items');
+// Если они есть то выполняется следущие условия
+if (animItems.length > 0) {
+	window.addEventListener('scroll', animOnScroll, true);
+	function animOnScroll() {
+		for (let index = 0; index < animItems.length; index++) {
+			const animItem = animItems[index];
+			const animItemHeight = animItem.offsetHeight;
+			const animItemOffset = offset(animItem).top;
+			const animStart = 4;
+
+			let animItemPoint = window.innerHeight - animItemHeight / animStart;
+
+			if (animItemHeight > window.innerHeight) {
+				animItemPoint = window.innerHeight - window.innerHeight / animStart;
+			}
+			if (
+				window.scrollY > animItemOffset - animItemPoint &&
+				window.scrollY < animItemOffset + animItemHeight
+			) {
+				animItem.classList.add('anim');
+			} else {
+				if (!animItem.classList.contains('no-anim-again')) {
+					animItem.classList.remove('anim');
+				}
+			}
+		}
+	}
+	function offset(el) {
+		const rect = el.getBoundingClientRect();
+		let scrollLeft = window.scrollY || document.documentElement.scrollLeft;
+		let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+		return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+	}
+	animOnScroll();
+}
