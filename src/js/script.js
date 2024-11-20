@@ -8,6 +8,7 @@ function isWebp() {
 		webP.src =
 			'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
 	}
+
 	testWebP(function (support) {
 		if (support == true) {
 			document.querySelector('body').classList.add('webp');
@@ -40,6 +41,7 @@ let animItems = document.querySelectorAll('.anim-items');
 // Если они есть то выполняется следущие условия
 if (animItems.length > 0) {
 	window.addEventListener('scroll', animOnScroll, true);
+
 	function animOnScroll() {
 		for (let index = 0; index < animItems.length; index++) {
 			const animItem = animItems[index];
@@ -64,6 +66,7 @@ if (animItems.length > 0) {
 			}
 		}
 	}
+
 	function offset(el) {
 		const rect = el.getBoundingClientRect();
 		let scrollLeft = window.scrollY || document.documentElement.scrollLeft;
@@ -71,5 +74,6 @@ if (animItems.length > 0) {
 
 		return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
 	}
+
 	animOnScroll();
 }

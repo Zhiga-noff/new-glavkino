@@ -1,0 +1,46 @@
+//@import 'variables';
+//
+//@import 'src/scss/nullstyle';
+//@import 'templates';
+//
+//@import 'src/scss/colors';
+//
+//@import 'src/scss/fonts';
+//
+//@import 'index';
+//
+//@import 'third-block';
+//@import 'fourth-block';
+//@import 'fifth-block';
+//@import 'sixth-block';
+//
+//@import 'pavilioni';
+//
+//html {
+//  overflow-y: hidden;
+//  overflow-x: hidden;
+//  scroll-behavior: smooth !important;
+//  scrollbar-color: #e2241d #1c1c1c;
+//
+//  font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (1920 - 320)));
+//  @media screen and (max-width: $tablet) {
+//    font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (768 - 320)));
+//  }
+//
+//  &::-webkit-scrollbar-track {
+//    background-color: #1c1c1c;
+//  }
+//
+//  &::-webkit-scrollbar-thumb {
+//    background-color: #e2241d;
+//    border-radius: 5px;
+//  }
+//
+//  &::-webkit-scrollbar {
+//    width: 1px;
+//  }
+//}
+//
+//.hidden {
+//  opacity: 0;
+//}

@@ -1,44 +1,42 @@
-@import 'variables.scss';
+@import 'src/scss/nullstyle';
+@import 'src/scss/colors';
+@import 'src/scss/fonts';
 
-@import 'nullstyle.scss';
-@import 'templates.scss';
-
-@import 'colors.scss';
-
-@import 'fonts.scss';
-
-@import 'index.scss';
-
-@import 'third-block.scss';
-@import 'fourth-block.scss';
-@import 'fifth-block.scss';
-@import 'sixth-block.scss';
-
-@import 'pavilioni.scss';
 
 html {
-	overflow-y: hidden;
-	overflow-x: hidden;
-	scroll-behavior: smooth !important;
-	scrollbar-color: #e2241d #1c1c1c;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  scroll-behavior: smooth !important;
+  scrollbar-color: #e2241d #1c1c1c;
 
-	font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (1920 - 320)));
-	@media screen and (max-width: $tablet) {
-		font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (768 - 320)));
-	}
+  font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (1920 - 320)));
+  @media screen and (max-width: 992px) {
+    font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (768 - 320)));
+  }
 
-	&::-webkit-scrollbar-track {
-		background-color: #1c1c1c;
-	}
-	&::-webkit-scrollbar-thumb {
-		background-color: #e2241d;
-		border-radius: 5px;
-	}
-	&::-webkit-scrollbar {
-		width: 1px;
-	}
+  &::-webkit-scrollbar-track {
+    background-color: #1c1c1c;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #e2241d;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 1px;
+  }
 }
 
 .hidden {
-	opacity: 0;
+  opacity: 0;
 }
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: $text;
+}
+
+@import "./components/screensevar";

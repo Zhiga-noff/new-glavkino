@@ -1,0 +1,48 @@
+.screensaver {
+  background-image: url("../../img/background.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__nav {
+  }
+
+  // .screensaver__logo
+  &__logo {
+    width: 43.875rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // .screensaver__list
+  &__list {
+    margin-left: 8.75rem;
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+
+    li {
+      transition-duration: .3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  // .screensaver__link
+  &__link {
+    &:hover {
+      color: white;
+
+    }
+  }
+}
