@@ -1,0 +1,95 @@
+.services-block {
+  width: 100vw;
+  height: 100vh;
+
+  // .services-block__head
+  &__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  // .services-block__title
+  &__title {
+    max-width: 56rem;
+    text-align: left;
+  }
+
+  // .services-block__row
+  &__row {
+    padding: 2rem 8rem;
+
+    display: flex;
+    align-items: stretch;
+  }
+
+  // .services-block__item
+  &__item {
+    flex: 1 0 25%;
+    position: relative;
+    transition-duration: .5s;
+
+    &:hover {
+      transform: scale(1.2);
+      z-index: 2;
+
+      .services-block__overlay {
+        background-color: rgba(0, 0, 0, .3);
+
+        &:before {
+          background-color: inherit;
+        }
+      }
+
+      .services-block__text {
+        opacity: 1;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // .services-block__overlay
+  &__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+    padding: 4rem;
+    transition-duration: .5s;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 1);
+      mix-blend-mode: color;
+      z-index: 0;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__item-title {
+    font-family: "RFDewiExtended", sans-serif;
+    line-height: 130%;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 2rem;
+  }
+
+  // .services-block__text
+  &__text {
+    color: white;
+    opacity: 0;
+    transition-duration: .5s;
+  }
+}
