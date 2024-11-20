@@ -1,0 +1,97 @@
+.pavilion-block {
+  width: 100vw;
+  height: 100vh;
+  // .pavilion-block__head
+  &__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  // .pavilion-block__title
+  &__title {
+  }
+
+  // .pavilion-block__row
+  &__row {
+    padding: 0 2.5rem 3rem;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  // .pavilion-block__left
+  &__left {
+    display: grid;
+    grid-template-columns: repeat(4, 10.625rem);
+    grid-template-rows: repeat(5, 6rem);
+    gap: 1.5rem;
+
+    flex: 0 0 50%;
+  }
+
+  // .pavilion-block__image
+  &__image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+
+    &_1 {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      grid-row-start: 1;
+      grid-row-end: 5;
+    }
+
+    &_2 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 5;
+      grid-row-end: 7;
+    }
+  }
+
+  // .pavilion-block__right
+  &__right {
+    flex: 0 0 50%;
+  }
+
+  // .pavilion-block__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+    
+    margin-top: 4.5rem;
+    margin-bottom: 4.5rem;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      column-gap: 4.5rem;
+    }
+  }
+
+  // .pavilion-block__number
+  &__number {
+    font-family: "RFDewiExtended", sans-serif;
+    font-size: 3rem;
+    line-height: 100%;
+    color: white;
+    flex: 0 0 5rem;
+  }
+
+  // .pavilion-block__text
+  &__text {
+    line-height: 2rem;
+  }
+
+  // .pavilion-block__button
+  &__button {
+    width: 22rem;
+    margin-left: calc(5rem + 4.5rem);
+  }
+}
