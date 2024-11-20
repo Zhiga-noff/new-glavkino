@@ -1,0 +1,39 @@
+.header {
+  padding: 2.5rem;
+  // .header__nav
+  &__nav {
+
+  }
+
+  &__logo {
+    max-width: 35.125rem;
+    margin-bottom: .75rem;
+  }
+
+  // .header__list
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+
+    li {
+      transition-duration: .3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  // .header__link
+  &__link {
+    &:hover {
+      color: white;
+    }
+
+    &.active {
+      color: white;
+    }
+  }
+}
+
