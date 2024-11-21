@@ -1,4 +1,6 @@
 .main {
+  scroll-snap-align: start;
+
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -38,6 +40,9 @@
     position: relative;
 
     padding: 4.5rem 2.5rem 2.5rem;
+    @media screen and (max-height: 900px) and (max-width: 1100px) {
+      padding: 1rem;
+    }
 
     &::before {
       content: '';

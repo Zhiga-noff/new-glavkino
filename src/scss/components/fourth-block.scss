@@ -1,4 +1,6 @@
 .services-block {
+  scroll-snap-align: start;
+
   width: 100vw;
   height: 100vh;
 
@@ -12,7 +14,7 @@
   // .services-block__title
   &__title {
     max-width: 56rem;
-    text-align: left;
+    text-align: right;
   }
 
   // .services-block__row
@@ -25,9 +27,11 @@
 
   // .services-block__item
   &__item {
-    flex: 1 0 25%;
+    flex: 0 1 25%;
     position: relative;
     transition-duration: .5s;
+    overflow: hidden;
+    max-height: 60vh;
 
     &:hover {
       transform: scale(1.2);

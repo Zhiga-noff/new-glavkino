@@ -40,6 +40,14 @@ body {
   background-color: $back;
 }
 
+main {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  overflow-x: hidden;
+  transition-duration: .5s;
+}
+
 .subtitle {
   font-family: "RFDewiExtended", sans-serif;
   line-height: 100%;
@@ -55,6 +63,14 @@ body {
   padding: 2.5rem;
   color: white;
   opacity: .4;
+
+  @media screen and (max-height: 900px) {
+    font-size: 5rem;
+  }
+
+  @media screen and (max-width: 1330px) {
+    font-size: 5rem;
+  }
 }
 
 .button {
@@ -83,3 +99,4 @@ body {
 @import "components/second-block";
 @import "components/third-block";
 @import "components/fourth-block";
+@import "components/fifth-block";

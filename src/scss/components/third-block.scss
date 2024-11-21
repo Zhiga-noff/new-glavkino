@@ -1,7 +1,10 @@
 
 .natur-block {
+  scroll-snap-align: start;
+
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 
   // .natur-block__head
   &__head {
@@ -13,7 +16,14 @@
   // .natur-block__title
   &__title {
     max-width: 56rem;
-    text-align: left;
+    text-align: right;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
   }
 
   // .natur-block__list
@@ -48,11 +58,12 @@
   // .natur-block__image
   &__image {
     position: relative;
-    height: 40vh;
-    max-height: 40vh;
+    //height: 40vh;
+    //max-height: 40vh;
+    height: 100%;
     overflow: hidden;
 
-    background: url("../../img/fourth-block/naturePl 2.png") center center/cover no-repeat;
+    background: url("../../img/fourth-block/naturePl 2.png") center bottom/cover no-repeat;
   }
 
   // .natur-block__overlay
