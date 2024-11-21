@@ -31,6 +31,12 @@
     background-color: $back;
     border-radius: .625rem !important;
     overflow: hidden;
+    position: relative;
+
+    @media screen and (max-width: 992px) {
+      flex-direction: column-reverse;
+      max-width: 90%;
+    }
   }
 
   // .footer__contacts
@@ -40,8 +46,28 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+    position: relative;
+    z-index: 10000;
 
     max-width: 26rem;
+
+    @media screen and (max-width: 992px) {
+      padding: 1.25rem;
+      max-width: none;
+    }
+  }
+
+  &__top {
+    @media screen and (max-width: 992px) {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  &__names-items {
+    @media screen and (max-width: 992px) {
+      display: flex;
+      column-gap: 5rem;
+    }
   }
 
   // .footer__title
@@ -49,10 +75,15 @@
     color: white;
     margin-bottom: 3rem;
 
+    @media screen and (max-width: 992px) {
+      margin-bottom: 1.25rem;
+    }
+
   }
 
   // .footer__footer
   &__footer {
+
   }
 
   // .footer__line
@@ -60,12 +91,28 @@
     height: 1px;
     background-color: $text;
     margin-bottom: .635rem;
+    @media screen and (max-width: 992px) {
+      margin: 0 auto .635rem;
+      max-width: 70%;
+    }
+  }
+
+  &__description {
+    @media screen and (max-width: 992px) {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
   }
 
   // .footer__address
   &__address {
     margin-bottom: 1.25rem;
     line-height: 120%;
+    @media screen and (max-width: 992px) {
+      max-width: 22rem;
+    }
+
 
     b {
       font-weight: 400;
@@ -101,7 +148,15 @@
   // .footer__map-container
   &__map-container {
     width: 100%;
-    border-radius: .625rem;
+    position: relative;
+    z-index: 5;
+    //border-radius: .625rem;
+
+    @media screen and (max-width: 992px) {
+      //padding: 1.25rem;
+      max-height: 25.75rem !important;
+      overflow: hidden;
+    }
   }
 }
 
@@ -128,7 +183,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    row-gap: 0;
+    row-gap: .375rem;
   }
 
   // .name__row
