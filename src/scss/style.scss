@@ -71,6 +71,11 @@ main {
   @media screen and (max-width: 1330px) {
     font-size: 5rem;
   }
+
+  @media screen and (max-width: 992px) {
+    font-size: 2rem;
+  }
+
 }
 
 .button {
