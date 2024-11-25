@@ -46,6 +46,9 @@
     @media screen and (max-width: 992px) {
       margin: 0;
     }
+    @media screen and (max-width: 639px) {
+      display: none;
+    }
 
     li {
       transition-duration: .3s;
