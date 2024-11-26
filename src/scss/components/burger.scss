@@ -1,5 +1,14 @@
 @import "../colors";
 
+@keyframes menuOpen {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .burger {
   display: none;
 
@@ -22,11 +31,19 @@
     z-index: 10;
     background-color: $back;
     top: 0;
-    right: -100vw;
-    transition-duration: .6s;
+    right: 0;
 
+    animation-name: menuOpen;
+    animation-duration: 0s;
+    animation-direction: reverse;
+    transform: translateX(-100vw);
+
+    transition-duration: .6s;
     &.active {
-      right: 0;
+      animation-name: menuOpen;
+      animation-duration: .6s;
+      transform: translateX(0);
+      animation-direction: reverse;
     }
   }
 
