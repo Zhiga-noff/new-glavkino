@@ -13,13 +13,26 @@
     overflow: hidden !important;
   }
 
+  @media screen and (max-width: 639px) {
+    padding: 1rem;
+  }
+
   &__head {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
+    @media screen and (max-width: 639px) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
     .header {
       padding: 0;
+      @media screen and (max-width: 639px) {
+        padding-bottom: 1rem;
+      }
     }
   }
 
@@ -71,80 +84,6 @@
       font-optical-sizing: auto;
       font-weight: 500;
       font-size: 1.25rem;
-    }
-  }
-}
-
-.headerL {
-  position: relative;
-
-  &__title {
-    color: #ffffff;
-    opacity: 0.4;
-    font-size: 9rem;
-    z-index: 1;
-    right: -2.5rem;
-    top: 2.5rem;
-    @media screen and (max-width: 992px) {
-      right: -25.5rem;
-      top: 21.5rem;
-      transform: rotate(-90deg);
-    }
-    @media screen and (max-width: 639px) {
-      right: -10.5rem;
-      top: 13.5rem;
-      opacity: 0.2;
-      font-size: 4rem;
-    }
-  }
-
-  &__blogo {
-    width: max-content;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    position: relative;
-    z-index: 1;
-    @media screen and (max-width: 639px) {
-      width: 100%;
-    }
-  }
-
-  &__logo {
-    height: 4.5rem;
-    overflow: hidden;
-    @media screen and (max-width: 992px) {
-      height: fit-content;
-    }
-    @media screen and (max-width: 639px) {
-      align-items: center;
-    }
-  }
-
-  &__back-link {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-    background: #e2241d;
-    gap: 1.875rem;
-    padding: 1.25rem 1.25rem;
-    transition: all 0.5s;
-    @media screen and (max-width: 992px) {
-      display: none;
-    }
-
-    & p {
-      font-family: 'RFDewiExtended';
-      font-size: 1.25rem;
-      color: white;
-      display: block;
-    }
-
-    &:hover {
-      scale: 1.05;
-      background-color: #d34843;
-      transition: all 0.5s;
     }
   }
 }
@@ -236,6 +175,10 @@
     display: none;
     font-size: 1.25rem;
     font-family: 'Raleway', sans-serif;
+
+    @media screen and (max-width: 639px) {
+      font-size: 1rem;
+    }
   }
 
   &__header {
@@ -246,6 +189,7 @@
 
     @media screen and (max-width: 639px) {
       font-size: 1.6rem;
+      //margin-bottom: 1rem;
       h3 {
         margin-top: 0.5rem;
       }
