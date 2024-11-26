@@ -75,12 +75,12 @@
     }
 
     &-header {
-      font-family: 'RFDewiExtended';
+      font-family: 'RFDewiExtended', sans-serif;
       font-size: 2.5rem;
     }
 
     &-text {
-      font-family: 'Nunito Sans';
+      font-family: 'Nunito Sans', sans-serif;
       font-optical-sizing: auto;
       font-weight: 500;
       font-size: 1.25rem;
@@ -89,7 +89,7 @@
 }
 
 %item {
-  font-family: 'RFDewiExtended';
+  font-family: 'RFDewiExtended', sans-serif;
   cursor: pointer;
 
   display: flex;
@@ -197,7 +197,7 @@
   }
 
   &__item {
-    &-1 {
+    &_1 {
       @extend %item;
       background-color: #ade21d;
       @media screen and (max-width: 992px) {
@@ -210,37 +210,37 @@
       }
     }
 
-    &-2 {
+    &_2 {
       @extend %item;
       background-color: #e2ad1d;
     }
 
-    &-3 {
+    &_3 {
       @extend %item;
       background-color: #1de21d;
     }
 
-    &-4 {
+    &_4 {
       @extend %item;
       background-color: #1de2e2;
     }
 
-    &-5 {
+    &_5 {
       @extend %item;
       background-color: #1d1de2;
     }
 
-    &-6 {
+    &_6 {
       @extend %item;
       background-color: #e21da7;
     }
 
-    &-7 {
+    &_7 {
       @extend %item;
       background-color: #e21d1d;
     }
 
-    &-8 {
+    &_8 {
       @extend %item;
       background-color: #1de21d;
     }

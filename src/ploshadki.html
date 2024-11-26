@@ -7,19 +7,11 @@
     <title>ГЛАВКИНО: Площадки</title>
 </head>
 <body>
-
+@@include('html/burger.html',{})
 <div class="pavilioni">
-    <h2 class="headerL__title fourth-title">Натурные<br/>площадки</h2>
-    <div class="pavilioni__headers headerL">
-        <!--				<div class="headerL__blogo">-->
-        <!--					<div class="headerL__logo">@@include('html/header.html',{})</div>-->
-        <!--					<div class="headerL__back-button">-->
-        <!--						<a href="index.html" class="headerL__back-link">-->
-        <!--							<img src="img/back-button-arrow.svg" alt="" />-->
-        <!--							<p>Назад</p>-->
-        <!--						</a>-->
-        <!--					</div>-->
-        <!--				</div>-->
+    <div class="pavilioni__head">
+        @@include('html/header.html',{})
+        <h2 class="pavilioni__title title">Павильоны</h2>
     </div>
     <div class="pavilioni__choices">
         <div class="pavilioni__list spisok">
@@ -49,6 +41,6 @@
         <div class="pavilioni__choosed"></div>
     </div>
 </div>
-<script src="js/page-logic/ploshadki.js"></script>
+<script src="js/page-logic/app.min.js"></script>
 </body>
 </html>

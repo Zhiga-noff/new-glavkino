@@ -6,7 +6,13 @@ export const animation = () => {
 	let animItems = document.querySelectorAll('.anim-items');
 	// Если они есть то выполняется следущие условия
 	if (animItems.length > 0) {
-		window.addEventListener('scroll', animOnScroll, true);
-		animOnScroll();
+		window.addEventListener(
+			'scroll',
+			() => {
+				animOnScroll(animItems);
+			},
+			true,
+		);
+		animOnScroll(animItems);
 	}
 };

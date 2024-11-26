@@ -8,14 +8,15 @@
 </head>
 <body>
 
-<div class="pavilioni">
+<main class="pavilioni">
+    @@include('html/burger.html',{})
     <div class="pavilioni__head">
         @@include('html/header.html',{})
         <h2 class="pavilioni__title title">Павильоны</h2>
     </div>
     <div class="pavilioni__choices">
-        <div class="pavilioni__list spisok">
-            <div class="spisok__item-1 anim-items" id="b1">
+        <aside class="pavilioni__list spisok">
+            <div class="spisok__item spisok__item_1 anim-items" id="b1">
                 <div class="spisok__header">
                     <h3>Павильон 1</h3>
                     <button>
@@ -28,7 +29,7 @@
                     павильон оборудован автономной системой кондиционирования.
                 </p>
             </div>
-            <div class="spisok__item-2 anim-items" id="b2">
+            <div class="spisok__item spisok__item_2 anim-items" id="b2">
                 <div class="spisok__header">
                     <h3>Павильон 2</h3>
                     <button>
@@ -41,7 +42,7 @@
                     павильон оборудован автономной системой кондиционирования.
                 </p>
             </div>
-            <div class="spisok__item-3 anim-items" id="b3">
+            <div class="spisok__item spisok__item_3 anim-items" id="b3">
                 <div class="spisok__header">
                     <h3>Павильон 3</h3>
                     <button>
@@ -54,7 +55,7 @@
                     павильон оборудован автономной системой кондиционирования.
                 </p>
             </div>
-            <div class="spisok__item-4 anim-items" id="b4">
+            <div class="spisok__item spisok__item_4 anim-items" id="b4">
                 <div class="spisok__header">
                     <h3>Павильон 4</h3>
                     <button>
@@ -67,7 +68,7 @@
                     Каждый павильон оборудован автономной системой кондиционирования.
                 </p>
             </div>
-            <div class="spisok__item-5 anim-items" id="b5">
+            <div class="spisok__item spisok__item_5 anim-items" id="b5">
                 <div class="spisok__header">
                     <h3>Павильон 5</h3>
                     <button>
@@ -80,7 +81,7 @@
                     павильон оборудован автономной системой кондиционирования.
                 </p>
             </div>
-            <div class="spisok__item-6 anim-items" id="b6">
+            <div class="spisok__item spisok__item_6 anim-items" id="b6">
                 <div class="spisok__header">
                     <h3>Павильон 6</h3>
                     <button>
@@ -93,7 +94,7 @@
                     павильон оборудован автономной системой кондиционирования.
                 </p>
             </div>
-            <div class="spisok__item-7 anim-items" id="b7">
+            <div class="spisok__item spisok__item_7 anim-items" id="b7">
                 <div class="spisok__header">
                     <h3>Павильон 7</h3>
                     <button>
@@ -106,7 +107,7 @@
                     павильон оборудован автономной системой кондиционирования.
                 </p>
             </div>
-            <div class="spisok__item-8 anim-items" id="b8">
+            <div class="spisok__item spisok__item_8 anim-items" id="b8">
                 <div class="spisok__header">
                     <h3>Павильон 8</h3>
                     <button>
@@ -119,10 +120,10 @@
                     павильон оборудован автономной системой кондиционирования.
                 </p>
             </div>
-        </div>
-        <div class="pavilioni__choosed"></div>
+        </aside>
+        <section class="pavilioni__choosed"></section>
     </div>
-</div>
-<script src="js/page-logic/pavilioni.js"></script>
+</main>
+<script src="js/app.min.js"></script>
 </body>
 </html>
