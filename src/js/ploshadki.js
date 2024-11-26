@@ -7,16 +7,16 @@ const buttons = [button1, button2];
 
 const texts = [document.getElementById('t1'), document.getElementById('t2')];
 
-const initialChoosed = () => {
-	choosedContainer.innerHTML = `
-        <h3 class="main__choosed-header">Натурная площадка 1</h3>
-        <p class="main__choosed-text">${texts[0].textContent}</p>
-        `;
-	choosedContainer.style.background = `url('img/ploshadki/1.png') center center / cover no-repeat`;
-	choosedContainer.style.backgroundBlendMode = 'multiply';
-	choosedContainer.style.backgroundColor = 'rgba(28, 28, 28, 0.6)';
-};
-initialChoosed();
+// const initialChoosed = () => {
+// 	choosedContainer.innerHTML = `
+//         <h3 class="main__choosed-header">Натурная площадка 1</h3>
+//         <p class="main__choosed-text">${texts[0].textContent}</p>
+//         `;
+// 	choosedContainer.style.background = `url('img/ploshadki/1.png') center center / cover no-repeat`;
+// 	choosedContainer.style.backgroundBlendMode = 'multiply';
+// 	choosedContainer.style.backgroundColor = 'rgba(28, 28, 28, 0.6)';
+// };
+// initialChoosed();
 
 buttons.forEach((button) => {
 	button.style.background = `url('img/ploshadki/${button.id.slice(1)}.png') center center / cover no-repeat`;
@@ -25,8 +25,8 @@ buttons.forEach((button) => {
 	if (document.documentElement.clientWidth > 992) {
 		button.addEventListener('click', () => {
 			choosedContainer.innerHTML = `
-        <h3 class="main__choosed-header">Натурная площадка ${button.id.slice(1)}</h3>
-        <p class="main__choosed-text">${texts[button.id.slice(1) - 1].textContent}</p>
+        <h3 class="pavilioni__choosed-header">Натурная площадка ${button.id.slice(1)}</h3>
+        <p class="pavilioni__choosed-text">${texts[button.id.slice(1) - 1].textContent}</p>
         `;
 			choosedContainer.style.background = `url('img/ploshadki/${button.id.slice(1)}.png') center center / cover no-repeat`;
 			//затемнить фон
@@ -49,9 +49,9 @@ buttons.forEach((button) => {
 	}
 });
 
-document.querySelector('.headerL__back-link').addEventListener('click', () => {
-	window.history.back();
-});
+// document.querySelector('.headerL__back-link').addEventListener('click', () => {
+// 	window.history.back();
+// });
 
 const menu = document.querySelectorAll('.open');
 const menuClose = document.querySelectorAll('.close');
@@ -80,6 +80,7 @@ let animItems = document.querySelectorAll('.anim-items');
 // Если они есть то выполняется следущие условия
 if (animItems.length > 0) {
 	window.addEventListener('scroll', animOnScroll, true);
+
 	function animOnScroll() {
 		for (let index = 0; index < animItems.length; index++) {
 			const animItem = animItems[index];
@@ -104,6 +105,7 @@ if (animItems.length > 0) {
 			}
 		}
 	}
+
 	function offset(el) {
 		const rect = el.getBoundingClientRect();
 		let scrollLeft = window.scrollY || document.documentElement.scrollLeft;
@@ -111,5 +113,6 @@ if (animItems.length > 0) {
 
 		return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
 	}
+
 	animOnScroll();
 }

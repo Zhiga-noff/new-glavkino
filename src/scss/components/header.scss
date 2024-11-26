@@ -106,5 +106,25 @@
       color: white;
     }
   }
+
+  &__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    background: #e2241d;
+    gap: 1.875rem;
+    transition: all 0.5s;
+    width: 100%;
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
+
+    &:hover {
+      scale: 1.05;
+      background-color: #d34843;
+      transition: all 0.5s;
+    }
+  }
 }
 

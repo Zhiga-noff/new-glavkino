@@ -22,16 +22,16 @@ const texts = [
 	document.getElementById('t8'),
 ];
 
-const initialChoosed = () => {
-	choosedContainer.innerHTML = `
-        <h3 class="main__choosed-header">Павильон 1</h3>
-        <p class="main__choosed-text">${texts[0].textContent}</p>
-        `;
-	choosedContainer.style.background = `url('img/pavilioni/1.png') center center / cover no-repeat`;
-	choosedContainer.style.backgroundBlendMode = 'multiply';
-	choosedContainer.style.backgroundColor = 'rgba(28, 28, 28, 0.6)';
-};
-initialChoosed();
+// const initialChoosed = () => {
+// 	choosedContainer.innerHTML = `
+//         <h3 class="main__choosed-header">Павильон 1</h3>
+//         <p class="main__choosed-text">${texts[0].textContent}</p>
+//         `;
+// 	choosedContainer.style.background = `url('img/pavilioni/1.png') center center / cover no-repeat`;
+// 	choosedContainer.style.backgroundBlendMode = 'multiply';
+// 	choosedContainer.style.backgroundColor = 'rgba(28, 28, 28, 0.6)';
+// };
+// initialChoosed();
 
 buttons.forEach((button) => {
 	const pavilionNumber = button.id.slice(1);
@@ -122,6 +122,7 @@ let animItems = document.querySelectorAll('.anim-items');
 // Если они есть то выполняется следущие условия
 if (animItems.length > 0) {
 	window.addEventListener('scroll', animOnScroll, true);
+
 	function animOnScroll() {
 		for (let index = 0; index < animItems.length; index++) {
 			const animItem = animItems[index];
@@ -146,6 +147,7 @@ if (animItems.length > 0) {
 			}
 		}
 	}
+
 	function offset(el) {
 		const rect = el.getBoundingClientRect();
 		let scrollLeft = window.scrollY || document.documentElement.scrollLeft;
@@ -153,5 +155,6 @@ if (animItems.length > 0) {
 
 		return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
 	}
+
 	animOnScroll();
 }

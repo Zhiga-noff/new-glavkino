@@ -1,4 +1,4 @@
-const choosedContainer = document.querySelector('.main__choosed');
+const choosedContainer = document.querySelector('.pavilioni__choosed');
 
 const button1 = document.getElementById('b1');
 const button2 = document.getElementById('b2');
@@ -22,16 +22,16 @@ const texts = [
 	document.getElementById('t8'),
 ];
 
-const initialChoosed = () => {
-	choosedContainer.innerHTML = `
-        <h3 class="main__choosed-header">Павильон 1</h3>
-        <p class="main__choosed-text">${texts[0].textContent}</p>
-        `;
-	choosedContainer.style.background = `url('img/pavilioni/1.png') center center / cover no-repeat`;
-	choosedContainer.style.backgroundBlendMode = 'multiply';
-	choosedContainer.style.backgroundColor = 'rgba(28, 28, 28, 0.6)';
-};
-initialChoosed();
+// const initialChoosed = () => {
+// 	choosedContainer.innerHTML = `
+//         <h3 class="main__choosed-header">Павильон 1</h3>
+//         <p class="main__choosed-text">${texts[0].textContent}</p>
+//         `;
+// 	choosedContainer.style.background = `url('img/pavilioni/1.png') center center / cover no-repeat`;
+// 	choosedContainer.style.backgroundBlendMode = 'multiply';
+// 	choosedContainer.style.backgroundColor = 'rgba(28, 28, 28, 0.6)';
+// };
+// initialChoosed();
 
 buttons.forEach((button) => {
 	const pavilionNumber = button.id.slice(1);
@@ -45,8 +45,8 @@ buttons.forEach((button) => {
 	if (window.innerWidth > 992) {
 		button.addEventListener('click', () => {
 			choosedContainer.innerHTML = `
-				<h3 class="main__choosed-header">Павильон ${pavilionNumber}</h3>
-				<p class="main__choosed-text">${texts[pavilionNumber - 1].textContent}</p>
+				<h3 class="pavilioni__choosed-header">Павильон ${pavilionNumber}</h3>
+				<p class="pavilioni__choosed-text">${texts[pavilionNumber - 1].textContent}</p>
 			`;
 			choosedContainer.style.background = `url(${pavilionImagePath}) center center / cover no-repeat`;
 			choosedContainer.style.backgroundBlendMode = 'multiply';
@@ -63,36 +63,6 @@ buttons.forEach((button) => {
 			}
 		});
 	}
-});
-//  buttons.forEach((button) => {
-//  	button.style.backgroundImage = `url('img/pavilioni/${button.id.slice(1)}.png') center center / cover no-repeat`;
-//  	button.style.backgroundBlendMode = 'multiply';
-//  	button.style.backgroundColor = 'rgba(28, 28, 28, 0.6)';
-//  	if (document.documentElement.clientWidth > 992) {
-//  		button.addEventListener('click', () => {
-//  			choosedContainer.innerHTML = `
-//          <h3 class="main__choosed-header">Павильон ${button.id.slice(1)}</h3>
-//          <p class="main__choosed-text">${texts[button.id.slice(1) - 1].textContent}</p>
-//          `;
-//  			choosedContainer.style.background = `url('img/pavilioni/${button.id.slice(1)}.png') center center / cover no-repeat`;
-//  			choosedContainer.style.backgroundBlendMode = 'multiply';
-//  			choosedContainer.style.backgroundColor = 'rgba(28, 28, 28, 0.6)';
-//  		});
-//  	} else {
-//  		accordion
-//  		button.addEventListener('click', () => {
-//  			if (button.classList.contains(`item-active`)) {
-//  				button.classList.remove(`item-active`);
-//  				texts[button.id.slice(1) - 1].style.display = 'none';
-//  			} else {
-//  				button.classList.add(`item-active`);
-//  				texts[button.id.slice(1) - 1].style.display = 'block';
-//  			}
-//  		});
-//  	}
-//  });
-document.querySelector('.headerL__back-link').addEventListener('click', () => {
-	window.history.back();
 });
 
 const menu = document.querySelectorAll('.open');
@@ -122,6 +92,7 @@ let animItems = document.querySelectorAll('.anim-items');
 // Если они есть то выполняется следущие условия
 if (animItems.length > 0) {
 	window.addEventListener('scroll', animOnScroll, true);
+
 	function animOnScroll() {
 		for (let index = 0; index < animItems.length; index++) {
 			const animItem = animItems[index];
@@ -146,6 +117,7 @@ if (animItems.length > 0) {
 			}
 		}
 	}
+
 	function offset(el) {
 		const rect = el.getBoundingClientRect();
 		let scrollLeft = window.scrollY || document.documentElement.scrollLeft;
@@ -153,5 +125,38 @@ if (animItems.length > 0) {
 
 		return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
 	}
+
 	animOnScroll();
 }
+
+const createButtonBack = () => {
+	const list = document.getElementById('list-header');
+	const header = list.parentElement;
+
+	const btn = document.createElement('button');
+	btn.classList.add('header__button', 'button');
+	btn.innerText = 'Назад';
+
+	const arrowBack = document.createElement('img');
+	arrowBack.src = 'img/back-button-arrow.svg';
+
+	btn.prepend(arrowBack);
+	header.append(btn);
+	list.remove();
+};
+
+const addButtonBack = () => {
+	const locationPath = window.location.pathname;
+	const pageMatch =
+		locationPath.includes('pavilioni') || locationPath.includes('ploshadki');
+
+	if (pageMatch) {
+		createButtonBack();
+	}
+};
+
+addButtonBack();
+
+document.querySelector('.header__button').addEventListener('click', () => {
+	window.history.back();
+});
