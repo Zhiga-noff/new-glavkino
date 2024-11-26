@@ -1,26 +1,10 @@
 import { isWebp } from './utils/is-web.js';
+import { smoothScroll } from './utils/smooth-scroll.js';
 
 export const runAppFunc = () => {
 	isWebp();
-	console.log(1);
+	smoothScroll();
 };
-
-isWebp();
-
-const menu = document.querySelectorAll('.open');
-const menuClose = document.querySelectorAll('.close');
-const burger = document.querySelector('.burger');
-
-menu.forEach((item) => {
-	item.addEventListener('click', () => {
-		burger.classList.add('burger-active');
-	});
-});
-menuClose.forEach((item) => {
-	item.addEventListener('click', () => {
-		burger.classList.remove('burger-active');
-	});
-});
 
 // Данная функция позволяет создавать анимацю появления объектов при скролле сайта
 // Проверяем наличие класса у объекта который будем анимировать
