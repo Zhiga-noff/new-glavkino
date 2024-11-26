@@ -1,9 +1,11 @@
 import { isWebp } from './utils/is-web.js';
 import { smoothScroll } from './utils/smooth-scroll.js';
+import { openBurger } from './utils/open-burger.js';
 
 export const runAppFunc = () => {
 	isWebp();
 	smoothScroll();
+	openBurger();
 };
 
 // Данная функция позволяет создавать анимацю появления объектов при скролле сайта

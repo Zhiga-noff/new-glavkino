@@ -1,16 +1,28 @@
-export const openBurger = () => {
-	const menu = document.querySelectorAll('.open');
-	const menuClose = document.querySelectorAll('.close');
-	const burger = document.querySelector('.burger');
+const clickToBurger = () => {
+	const burger = document.querySelectorAll('.header__burger');
+	const burgerMenu = document.querySelector('.burger');
+	burger.forEach((item) => {
+		item.classList.toggle('active');
+	});
+	burgerMenu.classList.toggle('active');
+};
 
-	menu.forEach((item) => {
-		item.addEventListener('click', () => {
-			burger.classList.add('burger-active');
-		});
+const clickToElement = (e) => {
+	const list = document.querySelectorAll('.burger__link');
+	list.forEach((item) => {
+		if (item === e.target) {
+			clickToBurger();
+		}
 	});
-	menuClose.forEach((item) => {
-		item.addEventListener('click', () => {
-			burger.classList.remove('burger-active');
-		});
+};
+
+export const openBurger = () => {
+	const burger = document.querySelectorAll('.header__burger');
+	const burgerMenu = document.querySelector('.burger');
+
+	burger.forEach((item) => {
+		item.addEventListener('click', clickToBurger);
 	});
+
+	burgerMenu.addEventListener('click', clickToElement, false);
 };

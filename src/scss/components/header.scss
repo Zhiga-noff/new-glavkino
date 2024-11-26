@@ -1,4 +1,6 @@
 .header {
+  position: relative;
+  z-index: 11;
   padding: 2.5rem;
   @media screen and (max-width: 992px) {
     padding: 1.25rem;
@@ -27,6 +29,22 @@
       height: 3.3rem;
       width: 3.3rem;
       cursor: pointer;
+
+      &.active {
+        &::before {
+          transform: rotate(45deg);
+          top: 1.6rem;
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+          bottom: 1.6rem;
+        }
+
+        span {
+          opacity: 0;
+        }
+      }
     }
 
     span {
