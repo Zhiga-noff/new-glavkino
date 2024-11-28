@@ -7,15 +7,16 @@
     <title>ГЛАВКИНО: Площадки</title>
 </head>
 <body>
-@@include('html/burger.html',{})
-<div class="pavilioni">
+
+<main class="pavilioni">
+    @@include('html/burger.html',{})
     <div class="pavilioni__head">
         @@include('html/header.html',{})
         <h2 class="pavilioni__title title">Павильоны</h2>
     </div>
     <div class="pavilioni__choices">
-        <div class="pavilioni__list spisok">
-            <div class="spisok__item-1 anim-items" id="b1">
+        <aside class="pavilioni__list spisok">
+            <div class="spisok__item spisok__item_1 anim-items" id="b1">
                 <div class="spisok__header">
                     <h3>Площадка 1</h3>
                     <button>
@@ -26,7 +27,7 @@
                     Кино-телекомплекс включает в себя 9 съемочных площадок от 133м2 до 3082м2.
                 </p>
             </div>
-            <div class="spisok__item-2 anim-items" id="b2">
+            <div class="spisok__item spisok__item_2 anim-items" id="b2">
                 <div class="spisok__header">
                     <h3>Площадка 2</h3>
                     <button>
@@ -37,10 +38,10 @@
                     Кино-телекомплекс включает в себя 9 съемочных площадок от 133м2 до 3082м2.
                 </p>
             </div>
-        </div>
-        <div class="pavilioni__choosed"></div>
+        </aside>
+        <section class="pavilioni__choosed"></section>
     </div>
-</div>
-<script src="js/page-logic/app.min.js"></script>
+</main>
+<script src="js/app.min.js"></script>
 </body>
 </html>
