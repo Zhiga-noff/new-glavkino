@@ -189,6 +189,8 @@
     width: 100%;
     position: relative;
     z-index: 5;
+    max-height: 43.75rem;
+
     //border-radius: .625rem;
 
     @media screen and (max-width: 992px) {
@@ -249,8 +251,10 @@
 .contact-info {
   // .contact-info__map-frame
   &__map-frame {
+    height: 43.75rem;
+    max-height: 43.75rem;
     @media screen and (max-width: 639px) {
-      height: 100%;
+      //height: 100%;
     }
   }
 }

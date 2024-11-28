@@ -5,13 +5,11 @@ export const observer = new IntersectionObserver(
 
 		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
-				console.log('Элемент в зоне видимости');
 				// Выполните действия, когда элемент становится видимым
 				setTimeout(() => {
 					mainBlock.scrollIntoView({ behavior: 'smooth' });
 				}, 3000);
 			} else {
-				console.log('Элемент не в зоне видимости');
 				screensaver.remove();
 				// Выполните действия, когда элемент выходит из зоны видимости
 			}
