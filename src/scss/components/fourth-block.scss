@@ -72,6 +72,7 @@
         background-color: rgba(0, 0, 0, .3);
 
         &:before {
+          z-index: -1;
           background-color: inherit;
         }
       }
@@ -111,6 +112,11 @@
     background-color: rgba(0, 0, 0, .7);
     padding: 4rem;
     transition-duration: .5s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
 
     @media screen and (max-width: 992px) {
       padding: 2.5rem 1.5rem;

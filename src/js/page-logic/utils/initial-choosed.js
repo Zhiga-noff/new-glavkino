@@ -1,4 +1,5 @@
 import { getTitleAndText } from './get-title-and-text.js';
+import { openPop } from '../../utils/pop-up-func.js';
 
 export const initialChoosed = (array, index = 0) => {
 	const choosedContainer = document.querySelector('.pavilioni__choosed');
@@ -26,9 +27,4 @@ export const initialChoosed = (array, index = 0) => {
 	btn.addEventListener('click', () => {
 		openPop();
 	});
-};
-
-const openPop = () => {
-	const popup = document.querySelector('.pop-up');
-	popup.classList.toggle('active');
 };
