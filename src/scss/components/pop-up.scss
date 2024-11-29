@@ -44,6 +44,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 992px) {
+      width: 70%;
+      height: 40%;
+    }
+    @media screen and (max-width: 639px) {
+      width: 90%;
+      height: 40%;
+    }
   }
 
   // .pop-up__title
