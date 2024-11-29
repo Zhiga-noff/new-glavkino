@@ -4,11 +4,10 @@ import { openBurger } from './utils/open-burger.js';
 import { animation } from './animation/animation.js';
 import { pageRun } from './page-logic/page-run.js';
 import { screensaverOut } from './utils/screensaver-out.js';
+import { popUpFunc } from './utils/pop-up-func.js';
 
 export const runAppFunc = () => {
 	isWebp();
-	screensaverOut();
-	smoothScroll();
 	openBurger();
 	animation();
 
@@ -17,5 +16,9 @@ export const runAppFunc = () => {
 		locationPath.includes('pavilioni') || locationPath.includes('ploshadki');
 	if (pageMatch) {
 		pageRun();
+	} else {
+		screensaverOut();
+		smoothScroll();
 	}
+	popUpFunc();
 };
