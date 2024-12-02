@@ -12,6 +12,7 @@
 .burger {
   display: none;
 
+
   @media screen and (max-width: 639px) {
     display: flex;
     flex-direction: column;
@@ -27,7 +28,7 @@
     width: 100vw;
     height: 100dvh;
 
-    position: absolute;
+    position: fixed;
     z-index: 10;
     background-color: $back;
     top: 0;
