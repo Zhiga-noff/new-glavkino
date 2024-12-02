@@ -1,4 +1,5 @@
 import { initialChoosed } from './initial-choosed.js';
+import { setHeight } from './set-height.js';
 
 export const createSection = (buttonList) => {
 	buttonList.forEach((button, index) => {
@@ -8,20 +9,21 @@ export const createSection = (buttonList) => {
 		button.style.backgroundBlendMode = 'multiply';
 		button.style.backgroundColor = 'rgba(28, 28, 28, 0.6)';
 
+		const textP = button.querySelector('p');
+		const btnForMobil = button.querySelector('.non-desk');
+
 		if (window.innerWidth > 992) {
 			button.addEventListener('click', () => {
 				initialChoosed(buttonList, index);
 			});
 		} else {
-			button.addEventListener('click', () => {
-				if (button.classList.contains(`item-active`)) {
-					button.classList.remove(`item-active`);
-					button.querySelector('p').style.display = 'none';
-				} else {
-					button.classList.add(`item-active`);
-					button.querySelector('p').style.display = 'block';
-				}
-			});
+			button.addEventListener(
+				'click',
+				(e) => {
+					setHeight(e, button, textP, btnForMobil);
+				},
+				true,
+			);
 		}
 	});
 };

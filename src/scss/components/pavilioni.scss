@@ -31,6 +31,7 @@
     }
 
     @media screen and (max-width: 639px) {
+      row-gap: unset;
       flex-direction: column;
       align-items: flex-start;
       margin-bottom: 1rem;
@@ -97,6 +98,10 @@
 
   &__button {
     width: 22.5rem;
+
+    &.non-desk {
+      display: none;
+    }
   }
 }
 
@@ -123,7 +128,7 @@
     opacity: 1;
   }
 
-  & button {
+  & .arrow-btn {
     background: #e21d1d;
     padding: 1.25rem;
     align-self: self-end;
@@ -187,6 +192,7 @@
     display: none;
     font-size: 1.25rem;
     font-family: 'Raleway', sans-serif;
+    margin-bottom: 1rem;
 
     @media screen and (max-width: 639px) {
       font-size: 1rem;
@@ -260,7 +266,7 @@
 }
 
 .item-active {
-  & button {
+  & .arrow-btn {
     transform: rotate(270deg);
     transition: all 0.5s;
   }
@@ -272,7 +278,7 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: rgba($color: #1c1c1c, $alpha: 0.4);
-    & button {
+    & .arrow-btn {
       transform: rotate(270deg);
       transition: all 0.5s;
     }
