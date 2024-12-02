@@ -16,15 +16,24 @@ html {
 
   &::-webkit-scrollbar-track {
     background-color: #1c1c1c;
+    @media screen and (max-width: 639px) {
+      width: 0;
+    }
   }
 
   &::-webkit-scrollbar-thumb {
     background-color: #e2241d;
     border-radius: 5px;
+    @media screen and (max-width: 639px) {
+      width: 0;
+    }
   }
 
   &::-webkit-scrollbar {
     width: 1px;
+    @media screen and (max-width: 639px) {
+      width: 0;
+    }
   }
 }
 
