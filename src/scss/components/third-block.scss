@@ -163,6 +163,9 @@
     &.anim {
       opacity: 1;
       transform: translateY(0);
+      @media screen and (max-width: 639px) {
+        transform: translate(-50%);
+      }
     }
   }
 }
