@@ -14,6 +14,9 @@
     @media screen and (max-width: 992px) {
       max-width: 30.25rem;
     }
+    @media screen and (max-width: 992px) {
+      max-width: none;
+    }
   }
 
   // .about-us__main
@@ -96,7 +99,7 @@
     font-weight: 600;
 
     @media screen and (max-width: 639px) {
-      font-size: .9rem;
+      font-size: 1rem;
       line-height: 130%;
     }
 
@@ -116,7 +119,7 @@
       margin: 5rem auto 0;
     }
     @media screen and (max-width: 639px) {
-      margin-top: 1rem;
+      margin-top: 2rem;
     }
 
   }

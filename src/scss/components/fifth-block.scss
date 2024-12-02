@@ -205,8 +205,6 @@
   }
 }
 
-.subtitle {
-}
 
 .name {
   margin-bottom: 2rem;
@@ -254,7 +252,7 @@
     height: 43.75rem;
     max-height: 43.75rem;
     @media screen and (max-width: 639px) {
-      //height: 100%;
+      height: 100%;
     }
   }
 }
