@@ -7,6 +7,9 @@ export const observer = new IntersectionObserver(
 			if (entry.isIntersecting) {
 				// Выполните действия, когда элемент становится видимым
 				setTimeout(() => {
+					if (mainBlock.offsetTop === 0) {
+						return;
+					}
 					mainBlock.scrollIntoView({ behavior: 'smooth' });
 				}, 3000);
 			} else {
