@@ -18,8 +18,7 @@ export const runAppFunc = () => {
         locationPath.includes('pavilioni') || locationPath.includes('ploshadki');
     if (pageMatch) {
         pageRun();
-    }
-    if (locationPath.includes('about-us')) {
+    } else if (locationPath.includes('about-us')) {
         modifyBurger()
         modifyLinkBurger()
     } else {
