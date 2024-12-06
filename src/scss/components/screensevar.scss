@@ -18,6 +18,10 @@
   }
 
   &__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(1.5);
     @media screen and (max-width: 992px) {
       max-width: 80%;
       display: flex;
@@ -43,7 +47,8 @@
 
   // .screensaver__list
   &__list {
-    margin-left: 8.75rem;
+    margin-top: 2rem;
+    //margin-left: 8.75rem;
     display: flex;
     align-items: center;
     column-gap: 1.5rem;
