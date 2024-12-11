@@ -8,7 +8,7 @@
     <!-- Заголовок страницы в браузере -->
     <title>ГЛАВКИНО</title>
     <!-- Подключаем CSS -->
-    <link rel="stylesheet" href="css/style.min.css?_v=20241209140512"/>
+    <link rel="stylesheet" href="css/style.min.css?_v=20241211101503"/>
     <!-- Добавляем иконку к сайту -->
     <link rel="shortcut icon" href="img/favicon.ico"/>
     <!-- Кодировка страницы -->
@@ -28,7 +28,7 @@
                 <img src="img/logo-white.svg" alt=""/>
             </div>
             <ul class="screensaver__list">
-                <li><a href="#" class="screensaver__link">Студия звукозаписи</a></li>
+                <li><a href="#studio" class="screensaver__link">Студия звукозаписи</a></li>
                 <li><a href="#pavilion" class="screensaver__link">Павильоны</a></li>
                 <li><a href="#natur" class="screensaver__link">Площадки</a></li>
                 <li><a href="#services" class="screensaver__link">Услуги</a></li>
@@ -39,6 +39,7 @@
     </header>
     <nav class="burger">
     <ul class="burger__list">
+        <li><a href="#studio" class="burger__link">Студия звукозаписи</a></li>
         <li><a href="#pavilion" class="burger__link">Павильоны</a></li>
         <li><a href="#natur" class="burger__link">Площадки</a></li>
         <li><a href="#services" class="burger__link">Услуги</a></li>
@@ -62,13 +63,14 @@
         </a></li>
     </ul>
 
-</nav> <section class="main" id="main">
+</nav>
+    <section class="main" id="main">
     <div class="main__left">
         <header class="header">
     <div class="header__nav">
         <a href="index.html" class="header__logo"><img src="img/logo-red.svg" alt=""></a>
         <ul class="header__list" id="list-header">
-            <li><a href="#" class="header__link">Студия звукозаписи</a></li>
+            <li><a href="#studio" class="header__link">Студия звукозаписи</a></li>
             <li><a href="#pavilion" class="header__link">Павильоны</a></li>
             <li><a href="#natur" class="header__link">Площадки</a></li>
             <li><a href="#services" class="header__link">Услуги</a></li>
@@ -104,8 +106,17 @@
                 Подробнее <img src="img/button_arrow.svg" alt="">
             </a>
         </div>
-
         <div class="main__item main__item_2 anim-items no-anim-again">
+            <div class="main__top-item">
+                <h4 class="main__title-item">Студия звукозаписи</h4>
+            </div>
+
+            <a class="main__button button" href="#studio">
+                Подробнее <img src="img/button_arrow.svg" alt="">
+            </a>
+        </div>
+
+        <div class="main__item main__item_3 anim-items no-anim-again">
             <div class="main__top-item">
                 <h4 class="main__title-item">Натурные площадки</h4>
                 <div class="main__text-item">
@@ -118,7 +129,7 @@
             </a>
         </div>
 
-        <div class="main__item main__item_3 anim-items no-anim-again">
+        <div class="main__item main__item_4 anim-items no-anim-again">
             <div class="main__top-item">
                 <h4 class="main__title-item">Услуги</h4>
                 <div class="main__text-item">
@@ -135,13 +146,57 @@
 
     </div>
 </section>
+    <section class="studio-block" id="studio">
+    <div class="studio-block__head">
+        <header class="header">
+    <div class="header__nav">
+        <a href="index.html" class="header__logo"><img src="img/logo-red.svg" alt=""></a>
+        <ul class="header__list" id="list-header">
+            <li><a href="#studio" class="header__link">Студия звукозаписи</a></li>
+            <li><a href="#pavilion" class="header__link">Павильоны</a></li>
+            <li><a href="#natur" class="header__link">Площадки</a></li>
+            <li><a href="#services" class="header__link">Услуги</a></li>
+            <li><a href="about-us.html" class="header__link">О киностудии</a></li>
+            <li><a href="#contacts" class="header__link">Контакты</a></li>
+        </ul>
+        <div class="header__burger">
+            <span></span>
+        </div>
+    </div>
+</header>
+
+        <h2 class="studio-block__title title anim-items no-anim-again">Студия звукозаписи</h2>
+    </div>
+    <ul class="studio-block__list">
+        <li class="anim-items no-anim-again">
+            <div class="studio-block__number">01.</div>
+            <p class="studio-block__text">Кино-телекомплекс включает в себя 9 съемочных павильонов от 133м² до 3082м².
+                Павильоны отвечают всем требованиям индустрии кино и телевидения. Каждый павильон оборудован автономной
+                системой кондиционирования.</p>
+        </li>
+        <li class="anim-items no-anim-again">
+            <div class="studio-block__number">02.</div>
+            <p class="studio-block__text">Звукопоглощающая способность перекрытий составляет более 70 dB. Электрическая
+                мощность до 1,5МВт. Рабочая высота до 18м. Возможность заезда игрового транспорта. Высокие показатели
+                нагрузки на несущие конструкции.</p>
+        </li>
+    </ul>
+    <figure class="studio-block__image">
+        <figcaption class="studio-block__overlay">
+            <a href="studia-zvukozapisi.html" class="studio-block__button button anim-items no-anim-again"
+            >Выбор площадки <img src="img/button_arrow.svg" alt=""
+            /></a>
+        </figcaption>
+    </figure>
+</section>
+
     <section class="pavilion-block" id="pavilion">
     <div class="pavilion-block__head">
         <header class="header">
     <div class="header__nav">
         <a href="index.html" class="header__logo"><img src="img/logo-red.svg" alt=""></a>
         <ul class="header__list" id="list-header">
-            <li><a href="#" class="header__link">Студия звукозаписи</a></li>
+            <li><a href="#studio" class="header__link">Студия звукозаписи</a></li>
             <li><a href="#pavilion" class="header__link">Павильоны</a></li>
             <li><a href="#natur" class="header__link">Площадки</a></li>
             <li><a href="#services" class="header__link">Услуги</a></li>
@@ -216,7 +271,7 @@
     <div class="header__nav">
         <a href="index.html" class="header__logo"><img src="img/logo-red.svg" alt=""></a>
         <ul class="header__list" id="list-header">
-            <li><a href="#" class="header__link">Студия звукозаписи</a></li>
+            <li><a href="#studio" class="header__link">Студия звукозаписи</a></li>
             <li><a href="#pavilion" class="header__link">Павильоны</a></li>
             <li><a href="#natur" class="header__link">Площадки</a></li>
             <li><a href="#services" class="header__link">Услуги</a></li>
@@ -260,7 +315,7 @@
     <div class="header__nav">
         <a href="index.html" class="header__logo"><img src="img/logo-red.svg" alt=""></a>
         <ul class="header__list" id="list-header">
-            <li><a href="#" class="header__link">Студия звукозаписи</a></li>
+            <li><a href="#studio" class="header__link">Студия звукозаписи</a></li>
             <li><a href="#pavilion" class="header__link">Павильоны</a></li>
             <li><a href="#natur" class="header__link">Площадки</a></li>
             <li><a href="#services" class="header__link">Услуги</a></li>
@@ -329,7 +384,7 @@
     <div class="header__nav">
         <a href="index.html" class="header__logo"><img src="img/logo-red.svg" alt=""></a>
         <ul class="header__list" id="list-header">
-            <li><a href="#" class="header__link">Студия звукозаписи</a></li>
+            <li><a href="#studio" class="header__link">Студия звукозаписи</a></li>
             <li><a href="#pavilion" class="header__link">Павильоны</a></li>
             <li><a href="#natur" class="header__link">Площадки</a></li>
             <li><a href="#services" class="header__link">Услуги</a></li>
@@ -448,9 +503,9 @@
 
 </div>
 
-    <!--    <script src="js/smooth-scroll.js?_v=20241209140512"></script>-->
+    <!--    <script src="js/smooth-scroll.js?_v=20241211101503"></script>-->
 </main>
 <!-- Подключаем JS главный -->
-<script src="js/app.min.js?_v=20241209140512"></script>
+<script src="js/app.min.js?_v=20241211101503"></script>
 </body>
 </html>
