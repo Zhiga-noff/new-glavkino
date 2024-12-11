@@ -1,13 +1,14 @@
 import {getTitleAndText} from './get-title-and-text.js';
 import {openPop} from '../../utils/pop-up-func.js';
+import {setFolderImage} from "./set-folder-image.js";
 
 export const initialChoosed = (array, index = 0) => {
     const choosedContainer = document.querySelector('.pavilioni__choosed');
     const {title, text} = getTitleAndText(array, index);
     let btn = document.querySelector('.pop');
 
-    const location = window.location.pathname
-    const folder = location.replace('/', '').replace('.html', '')
+
+    const folder = setFolderImage()
 
     if (btn) {
         btn.removeEventListener('click', () => {

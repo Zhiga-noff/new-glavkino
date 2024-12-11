@@ -1,9 +1,10 @@
 import {initialChoosed} from './initial-choosed.js';
 import {setHeight} from './set-height.js';
+import {setFolderImage} from "./set-folder-image.js";
 
 export const createSection = (buttonList) => {
-    const location = window.location.href
-    const folder = location.replace('/', '').replace('.html', '')
+
+    const folder = setFolderImage()
 
     buttonList.forEach((button, index) => {
         const pavilionImagePath = `img/${folder}/${index + 1}.png`;
