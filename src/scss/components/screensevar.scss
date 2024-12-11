@@ -28,7 +28,11 @@
       flex-direction: column;
       margin: 0 auto;
       align-items: center;
-      transform: scale(1);
+      transform: none;
+    }
+
+    @media screen and (max-width: 639px) {
+      max-width: 90%;
     }
   }
 
