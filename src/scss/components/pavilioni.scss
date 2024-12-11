@@ -47,6 +47,17 @@
 
   &__title {
     padding: 0;
+    font-size: 5rem;
+    text-align: right;
+
+    @media screen and (max-width: 992px) {
+      text-align: left;
+      font-size: 2rem;
+    }
+
+    @media screen and (max-width: 639px) {
+      padding: 0;
+    }
   }
 
   &__choices {
