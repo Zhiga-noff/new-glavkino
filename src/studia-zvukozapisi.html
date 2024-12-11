@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/style.min.css"/>
+    <title>ГЛАВКИНО: Павильоны</title>
+</head>
+<body>
+
+<main class="pavilioni">
+    @@include('html/burger.html',{})
+    <div class="pavilioni__head">
+        @@include('html/header.html',{})
+        <h2 class="pavilioni__title title">Павильоны</h2>
+    </div>
+    <div class="pavilioni__choices">
+        <aside class="pavilioni__list spisok">
+            <div class="spisok__item spisok__item_1 anim-items" id="b1">
+                <div class="spisok__header">
+                    <h3>Cтудия 1</h3>
+                    <button class="arrow-btn">
+                        <img src="img/forward-button-arrow.svg" alt=""/>
+                    </button>
+                </div>
+                <div class="pavilioni__text-with-button">
+                    <p class="spisok__text">
+                        Аппаратная записи «Foley» на базе:
+                        - Рабочая станция Mac Pro 6.1/ОЗУ 128 Гб/ SSD 1Тб/ Pro Tools 2024
+                        - 2 монитора 27" + просмотровый телевизор 55"
+                        - 3 просмотровых телевизора 46" в комнате записи фоли
+                        - Интерфейс AVID HD Native Thunderbolt
+                        - Контрольная консоль Avid Artist Mix
+                        - Акустическая система GENELEC — 8030APM
+                        - Микрофоны: Sanken cos11, Sanken cs1e, Sennheiser mke600, Shure SM7b
+                        - Радиосистема: Sennheiser EW-100, Neumann TLM 103 mt
+
+                    </p>
+                    <button class="pavilioni__button pop button non-desk">
+                        Забронировать <img src="img/button_arrow.svg" alt="">
+                    </button>
+                </div>
+
+            </div>
+            <div class="spisok__item spisok__item_2 anim-items" id="b2">
+                <div class="spisok__header">
+                    <h3>Студия 2</h3>
+                    <button class="arrow-btn">
+                        <img src="img/forward-button-arrow.svg" alt=""/>
+                    </button>
+                </div>
+                <div class="pavilioni__text-with-button">
+                    <p class="spisok__text">
+                        Аппаратная сведения 5.1 на базе:
+                        - Рабочая станция Mac Pro 6.1/ОЗУ 128 Гб/ SSD 1Тб/ Pro Tools 2024
+                        - Интерфейс AVID HD OMNI, PCI-e интерфейс HDX CORE,
+                        - 2 монитора 27" + просмотровый телевизор 55"
+                        - Акустическая система Genelec 1237A , сабвуфер 7380A, комплект калибровки GLM 4
+                        - Контрольная консоль Avid Pro Tools | S3 Control
+
+                    </p>
+                    <button class="pavilioni__button pop button non-desk">
+                        Забронировать <img src="img/button_arrow.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </aside>
+        <section class="pavilioni__choosed"></section>
+    </div>
+
+</main>
+@@include('html/pop-up.html',{})
+<script src="js/app.min.js"></script>
+</body>
+</html>

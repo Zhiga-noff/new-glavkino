@@ -1,9 +1,12 @@
-import { initialChoosed } from './initial-choosed.js';
-import { setHeight } from './set-height.js';
+import {initialChoosed} from './initial-choosed.js';
+import {setHeight} from './set-height.js';
 
 export const createSection = (buttonList) => {
+	const location = window.location.pathname
+	const folder = location.replace('/', '').replace('.html', '')
+
 	buttonList.forEach((button, index) => {
-		const pavilionImagePath = `img/pavilioni/${index + 1}.png`;
+		const pavilionImagePath = `img/${folder}/${index + 1}.png`;
 
 		button.style.background = `url(${pavilionImagePath}) center center / cover no-repeat`;
 		button.style.backgroundBlendMode = 'multiply';
