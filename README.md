@@ -1,6 +1,6 @@
 # New Glavkino
 
-Приложение для управления задачами ([Главкино](https://zhiga-noff.github.io/new-glavkino/)), разработанное с
+Редизайн сайта киностудии ([Главкино](https://zhiga-noff.github.io/new-glavkino/)), разработанное с
 использованием **JavaScript** и **Gulp**.
 
 ## Старт проекта
