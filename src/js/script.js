@@ -1,19 +1,28 @@
-// Функция для конвертации фотографий в формат webp
-function isWebp() {
-	function testWebP(callback) {
-		var webP = new Image();
-		webP.onload = webP.onerror = function () {
-			callback(webP.height == 2);
-		};
-		webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-	}
-	testWebP(function (support) {
-		if (support == true) {
-			document.querySelector('body').classList.add('webp');
-		} else {
-			document.querySelector('body').classList.add('no-webp');
-		}
-	});
-}
+import {isWebp} from './utils/is-web.js';
+import {smoothScroll} from './utils/smooth-scroll.js';
+import {openBurger} from './utils/open-burger.js';
+import {animation} from './animation/animation.js';
+import {pageRun} from './page-logic/page-run.js';
+import {popUpFunc} from './utils/pop-up-func.js';
+import {modifyBurger} from './page-logic/utils/modify-burger.js';
+import {modifyLinkBurger} from './page-logic/utils/modify-link-burger.js';
 
-isWebp();
+export const runAppFunc = () => {
+    isWebp();
+    openBurger();
+    animation();
+
+    const locationPath = window.location.pathname;
+    const pageMatch =
+        locationPath.includes('pavilioni') || locationPath.includes('ploshadki') || locationPath.includes('studia');
+    if (pageMatch) {
+        pageRun();
+    } else if (locationPath.includes('about-us')) {
+        modifyBurger();
+        modifyLinkBurger();
+    } else {
+        // screensaverOut();
+        smoothScroll();
+    }
+    popUpFunc();
+};

@@ -1,0 +1,84 @@
+.screensaver {
+  scroll-snap-align: start;
+
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  width: 100vw;
+  height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 992px) {
+    background-size: auto 100%;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(1.5);
+    @media screen and (max-width: 992px) {
+      //max-width: 80%;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      align-items: center;
+      transform: none;
+    }
+
+    @media screen and (max-width: 639px) {
+      max-width: 90%;
+    }
+  }
+
+  // .screensaver__logo
+  &__logo {
+    width: 43.875rem;
+
+
+    @media screen and (max-width: 992px) {
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // .screensaver__list
+  &__list {
+    margin-top: 2rem;
+    //margin-left: 8.75rem;
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+
+    @media screen and (max-width: 992px) {
+      margin: 0;
+    }
+    @media screen and (max-width: 639px) {
+      display: none;
+    }
+
+    li {
+      transition-duration: .3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  // .screensaver__link
+  &__link {
+    &:hover {
+      color: white;
+    }
+  }
+}

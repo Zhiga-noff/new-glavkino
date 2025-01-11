@@ -1,32 +1,52 @@
 <!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
-<!DOCTYPE html>
+<!doctype html>
 <!-- Оболочка документа, указываем язык содержимого -->
 <html lang="ru">
 <!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
 
 <head>
-	<!-- Заголовок страницы в браузере -->
-	<title>ГЛАВКИНО</title>
-	<!-- Подключаем CSS -->
-	<link rel="stylesheet" href="css/style.min.css">
-	<!-- Добавляем иконку к сайту -->
-	<link rel="shortcut icon" href="img/favicon.ico" />
-	<!-- Кодировка страницы -->
-	<meta charset="UTF-8">
-	<!-- Адаптивный метатег -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- Заголовок страницы в браузере -->
+    <title>ГЛАВКИНО</title>
+    <!-- Подключаем CSS -->
+    <link rel="stylesheet" href="css/style.min.css"/>
+    <!-- Добавляем иконку к сайту -->
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+    <!-- Кодировка страницы -->
+    <meta charset="UTF-8"/>
+    <!-- Адаптивный метатег -->
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
 </head>
 <!-- Отображаемое тело страницы -->
-
 <body>
-		<!-- Добавляем хедер -->
-		@@include('html/header.html',{})
+<main>
+    <header class="screensaver" id="screensaver">
+        <nav class="screensaver__nav">
+            <div class="screensaver__logo">
+                <img src="img/logo-white.svg" alt=""/>
+            </div>
+            <ul class="screensaver__list">
+                <li><a href="#studio" class="screensaver__link">Студия звукозаписи</a></li>
+                <li><a href="#pavilion" class="screensaver__link">Павильоны</a></li>
+                <li><a href="#natur" class="screensaver__link">Площадки</a></li>
+                <li><a href="#services" class="screensaver__link">Услуги</a></li>
+                <li><a href="about-us.html" class="screensaver__link">О киностудии</a></li>
+                <li><a href="#contacts" class="screensaver__link">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    @@include('html/burger.html',{})
+    @@include('html/first-block.html',{})
+    @@include('html/studio.html',{})
+    @@include('html/second-block.html',{}) @@include('html/third-block.html',{})
+    @@include('html/fourth-block.html',{}) @@include('html/fifth-block.html',{})
+    @@include('html/pop-up.html',{})
 
-
-		<!-- Футтер -->
-		@@include('html/footer.html',{})
-	<!-- Подключаем JS главный -->
-	<script src="js/script.js"></script>
+    <!--    <script src="js/smooth-scroll.js"></script>-->
+</main>
+<!-- Подключаем JS главный -->
+<script src="js/app.min.js"></script>
 </body>
-
 </html>

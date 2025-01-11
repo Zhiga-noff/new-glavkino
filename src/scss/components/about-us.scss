@@ -1,0 +1,144 @@
+
+.about-us {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  overflow-x: hidden;
+  transition-duration: .5s;
+  position: relative;
+
+  .header {
+    max-width: 36.25rem;
+    width: 100%;
+
+    @media screen and (max-width: 992px) {
+      max-width: 30.25rem;
+    }
+    @media screen and (max-width: 992px) {
+      max-width: none;
+    }
+  }
+
+  // .about-us__main
+  &__main {
+    scroll-snap-align: start;
+
+    width: 100vw;
+    height: 100dvh;
+    display: flex;
+
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+      row-gap: 2.5rem;
+    }
+
+    @media screen and (max-width: 639px) {
+      row-gap: 1rem;
+    }
+
+
+  }
+
+  // .about-us__left
+  &__left {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 50%;
+    justify-content: space-between;
+    @media screen and (max-width: 992px) {
+      flex: none;
+      height: auto;
+    }
+
+  }
+
+  // .about-us__info
+  &__info {
+    padding-bottom: 2.5rem;
+    padding-left: 2.5rem;
+    max-width: 50rem;
+    //margin-top: 3rem;
+
+    transform: translateX(-100%);
+    opacity: 0;
+    transition-duration: .7s;
+    @media screen and (max-width: 992px) {
+      max-width: 100%;
+      padding-bottom: 0;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    @media screen and (max-width: 639px) {
+      margin-top: 0;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    &.anim {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  // .about-us__title
+  &__title {
+    margin-bottom: 3rem;
+    @media screen and (max-width: 992px) {
+      margin-bottom: .75rem;
+    }
+
+    @media screen and (max-width: 639px) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  // .about-us__text
+  &__text {
+    margin-bottom: 1rem;
+    font-weight: 600;
+
+    @media screen and (max-width: 639px) {
+      font-size: 1rem;
+      line-height: 130%;
+    }
+
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+
+  }
+
+  // .about-us__button
+  &__button {
+    margin-top: 3rem;
+    width: 17.25rem;
+
+    @media screen and (max-width: 992px) {
+      margin: 5rem auto 0;
+    }
+    @media screen and (max-width: 639px) {
+      margin-top: 2rem;
+    }
+
+  }
+
+  // .about-us__image
+  &__image {
+    flex: 0 0 50%;
+    overflow: hidden;
+
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+
+.desk {
+}

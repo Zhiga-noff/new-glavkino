@@ -1,0 +1,79 @@
+@import "../colors";
+
+.pop-up {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  z-index: -10;
+  transition-duration: .3s;
+
+  &.active {
+    z-index: 20;
+    opacity: 1;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2c2c2c;
+    z-index: -1;
+    opacity: .7;
+  }
+
+  &__body {
+    position: relative;
+    background-color: $back;
+    width: 50%;
+    height: 60%;
+    padding: 2.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 992px) {
+      width: 70%;
+      height: 40%;
+    }
+    @media screen and (max-width: 639px) {
+      width: 90%;
+      height: 40%;
+    }
+  }
+
+  // .pop-up__title
+  &__title {
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  // .pop-up__buttons
+  &__buttons {
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  &__close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+  }
+}

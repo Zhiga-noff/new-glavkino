@@ -1,0 +1,78 @@
+@import "../colors";
+
+@keyframes menuOpen {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.burger {
+  display: none;
+
+
+  @media screen and (max-width: 639px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "RFDewiExtended", sans-serif;
+    font-size: 1.5rem;
+
+    padding-top: 10rem;
+    padding-bottom: 4rem;
+    color: white;
+
+    width: 100vw;
+    height: 100dvh;
+
+    position: fixed;
+    z-index: 10;
+    background-color: $back;
+    top: 0;
+    right: -100vw;
+    transition-duration: .6s;
+
+    &.active {
+      right: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    text-align: center;
+  }
+
+  // .burger__link
+  &__link {
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: .6rem;
+    font-family: "Nunito Sans", sans-serif;
+
+    a {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      column-gap: .6rem;
+      color: $text;
+
+      div {
+        width: 1rem;
+        height: 1rem;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
