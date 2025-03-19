@@ -18,7 +18,7 @@ export const initialChoosed = (array, index = 0) => {
 
     choosedContainer.innerHTML = `
 	    <h3 class="pavilioni__choosed-header">${title}</h3>
-	    <p class="pavilioni__choosed-text">${text}</p>
+	    <p class="pavilioni__choosed-text">${text || ' '}</p>
 	    <button class="pavilioni__button pop desk button">
                 Забронировать  <img src="../img/button_arrow.svg" alt="">
             </button>
