@@ -60,7 +60,9 @@
     display: flex;
     column-gap: 2rem;
     padding: 2.5rem 2.5rem 4.5rem;
+    max-width: 80%;
     @media screen and (max-width: 992px) {
+      max-width: none;
       flex-direction: column;
       row-gap: 2rem;
     }

@@ -241,6 +241,28 @@
 
   // .pavilion-block__text
   &__text {
+    margin-top: 4.5rem;
+    margin-bottom: 4.5rem;
+    line-height: 2rem;
+
+    transform: translateX(100%);
+    transition-duration: .9s;
+    opacity: 0;
+    transition-delay: .4s;
+
+    @media screen and (max-height: 900px) {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    @media screen and (max-width: 639px) {
+      line-height: 1.3rem;
+    }
+
+    &.anim {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 
   // .pavilion-block__button
@@ -250,7 +272,7 @@
 
     opacity: 0;
     transform: translateY(100%);
-    transition-delay: 1.6s;
+    transition-delay: 1s;
     transition-duration: .7s;
     @media screen and (max-width: 992px) {
       margin-left: 0;
