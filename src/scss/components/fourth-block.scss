@@ -96,7 +96,7 @@
       }
 
       .services-block__text {
-        opacity: 1;
+        opacity: 0;
       }
 
       @media screen and (max-width: 639px) {
@@ -185,7 +185,7 @@
   // .services-block__text
   &__text {
     color: white;
-    opacity: 0;
+    opacity: 1;
     transition-duration: .5s;
     @media screen and (max-width: 639px) {
       display: none;
