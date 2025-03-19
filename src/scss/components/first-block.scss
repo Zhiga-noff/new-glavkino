@@ -44,7 +44,6 @@
     @media screen and (max-width: 639px) {
       padding-left: 1rem;
       padding-right: 1rem;
-      margin-top: 3rem;
       margin-bottom: 3rem;
     }
     //height: auto;
@@ -254,6 +253,7 @@
         grid-column-start: 1;
         grid-row-start: 4;
         grid-row-end: 5;
+        display: none;
       }
     }
   }
