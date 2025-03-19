@@ -6,8 +6,19 @@ import {pageRun} from './page-logic/page-run.js';
 import {popUpFunc} from './utils/pop-up-func.js';
 import {modifyBurger} from './page-logic/utils/modify-burger.js';
 import {modifyLinkBurger} from './page-logic/utils/modify-link-burger.js';
+import videojs from "video.js";
 
 export const runAppFunc = () => {
+
+    const player = videojs('vid1', {
+        controls: true,
+        autoplay: false,
+        preload: 'auto',
+        loop: false,
+        // aspectRatio: '16:9'
+    });
+
+
     isWebp();
     openBurger();
     animation();

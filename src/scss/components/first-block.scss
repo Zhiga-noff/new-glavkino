@@ -27,6 +27,29 @@
 
   }
 
+  &__video {
+    padding-left: 2.5rem;
+    max-width: 90%;
+
+    @media screen and (max-height: 800px) and (min-width: 1024px) {
+      max-width: 70%;
+    }
+
+    @media screen and (max-width: 992px) {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      max-width: 100%;
+    }
+
+    @media screen and (max-width: 639px) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+    //height: auto;
+  }
+
   // .main__info
   &__info {
     padding-bottom: 2.5rem;
@@ -74,6 +97,7 @@
     grid-template-rows: repeat(5, 1fr);
     @media screen and (max-width: 992px) {
       flex: auto;
+      //display: none;
     }
 
     @media screen and (max-width: 639px) {
